@@ -138,9 +138,9 @@
     "semantic_hash": ""
   },
   "src/test/setup.ts": {
-    "mtime": 1795662697.970978,
-    "seen": 1795662744.0778012,
-    "ast_hash": "7d1a81b509e93b5103726ddbacef7ab0",
+    "mtime": 1795664782.4224916,
+    "seen": 1795664818.0962293,
+    "ast_hash": "fc0922cda875d97ab22af2a59692575e",
     "semantic_hash": ""
   },
   "vitest.config.ts": {
@@ -333,6 +333,30 @@
     "mtime": 1795664538.714547,
     "seen": 1795664659.3924165,
     "ast_hash": "aba0d58501ab690bbae0cfe02e6c9818",
+    "semantic_hash": ""
+  },
+  "src/components/ProjectModal.tsx": {
+    "mtime": 1795664733.7892752,
+    "seen": 1795664818.0962293,
+    "ast_hash": "2f888aea8c54c70168d30ddab8eebdc6",
+    "semantic_hash": ""
+  },
+  "src/components/ProjectsSection.test.tsx": {
+    "mtime": 1795664661.3945272,
+    "seen": 1795664818.0962293,
+    "ast_hash": "488ba87167e94af68d3846100af8cad3",
+    "semantic_hash": ""
+  },
+  "src/components/ProjectsSection.tsx": {
+    "mtime": 1795664734.9216428,
+    "seen": 1795664818.0962293,
+    "ast_hash": "16a928be669ff1cfda5f62154e81d2e7",
+    "semantic_hash": ""
+  },
+  "src/components/SiakaduPreview.tsx": {
+    "mtime": 1795664732.755898,
+    "seen": 1795664818.0962293,
+    "ast_hash": "481aa8153d7bcebd7d0d5efb3dde3e73",
     "semantic_hash": ""
   },
   "pnpm-lock.yaml": {
