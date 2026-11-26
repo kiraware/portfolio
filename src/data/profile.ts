@@ -6,7 +6,10 @@ export const PROFILE = {
   monogram: 'CA',
   handle: 'kiraware',
   email: 'cakrawangsaprabaalkautsar7@gmail.com',
-  heroArtwork: 'art/hero-leiden-desk.jpg',
+  heroArtwork: 'art/hero-violet-scene.jpg',
+  bgDayArtwork: 'art/bg-leiden-day.jpg',
+  bgNightArtwork: 'art/bg-leiden-night.jpg',
+  lakeBannerArtwork: 'art/banner-lake-reflections.jpg',
   contactArtwork: 'art/contact-envelope.jpg',
   headline: {
     id: 'Full-Stack & Backend Developer',

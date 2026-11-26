@@ -58,10 +58,17 @@ describe('Portfolio bilingual CV and project data integrity', () => {
   })
 
   it('verifies every referenced screenshot and artwork asset exists on disk under public/', () => {
-    const heroArt = path.join(PUBLIC_DIR, PROFILE.heroArtwork)
-    const contactArt = path.join(PUBLIC_DIR, PROFILE.contactArtwork)
-    expect(fs.existsSync(heroArt), `Missing hero artwork: ${heroArt}`).toBe(true)
-    expect(fs.existsSync(contactArt), `Missing contact artwork: ${contactArt}`).toBe(true)
+    const artworks = [
+      PROFILE.heroArtwork,
+      PROFILE.bgDayArtwork,
+      PROFILE.bgNightArtwork,
+      PROFILE.lakeBannerArtwork,
+      PROFILE.contactArtwork,
+    ]
+    for (const art of artworks) {
+      const fullArtPath = path.join(PUBLIC_DIR, art)
+      expect(fs.existsSync(fullArtPath), `Missing artwork: ${art}`).toBe(true)
+    }
 
     const screenshotCount = PROJECTS.reduce((count, project) => {
       for (const shot of project.screenshots) {
@@ -93,6 +100,13 @@ describe('Portfolio bilingual CV and project data integrity', () => {
 
     expect(serialized).not.toContain('085273510987')
     expect(serialized).not.toContain('85273510987')
+  })
+
+  it('avoids self-referential AI-style theme disclaimers in visible UI copy', () => {
+    const uiCopy = JSON.stringify(UI_STRINGS)
+    expect(uiCopy).not.toMatch(/Violet Evergarden/i)
+    expect(uiCopy).not.toMatch(/Dirancang dengan estetika/i)
+    expect(uiCopy).not.toMatch(/Terinspirasi/i)
   })
 
   it('includes all 11 CV projects with valid categories and all 15 CV experience records', () => {

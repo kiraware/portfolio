@@ -36,8 +36,8 @@ export const UI_STRINGS = {
     en: 'Skip to main content',
   },
   brandSubtitle: {
-    id: 'ARSIP REKAYASA · LEIDEN',
-    en: 'ENGINEERING DOSSIER',
+    id: 'FULL-STACK & BACKEND',
+    en: 'SOFTWARE ENGINEER',
   },
   navAriaLabel: {
     id: 'Navigasi utama',
@@ -52,12 +52,12 @@ export const UI_STRINGS = {
     en: 'Close navigation menu',
   },
   switchToLight: {
-    id: 'Aktifkan mode terang (Leiden Morning Parchment)',
-    en: 'Switch to light mode (Leiden Morning Parchment)',
+    id: 'Aktifkan mode terang',
+    en: 'Switch to light mode',
   },
   switchToDark: {
-    id: 'Aktifkan mode gelap (Leiden Midnight Letter)',
-    en: 'Switch to dark mode (Leiden Midnight Letter)',
+    id: 'Aktifkan mode gelap',
+    en: 'Switch to dark mode',
   },
   switchLanguageLabel: {
     id: 'Ganti bahasa ke Inggris',
@@ -81,8 +81,8 @@ export const UI_STRINGS = {
   },
   hero: {
     eyebrow: {
-      id: 'DISPATCH NO. 01 · FULL-STACK & BACKEND DEVELOPER',
-      en: 'DISPATCH NO. 01 · FULL-STACK & BACKEND DEVELOPER',
+      id: 'FULL-STACK & BACKEND DEVELOPER · @kiraware',
+      en: 'FULL-STACK & BACKEND DEVELOPER · @kiraware',
     },
     availability: {
       id: 'Terbuka untuk peluang Backend & Full-Stack Developer',
@@ -93,12 +93,12 @@ export const UI_STRINGS = {
       en: 'Explore Projects',
     },
     ctaContact: {
-      id: 'Kirim Pesan',
-      en: 'Send a Dispatch',
+      id: 'Hubungi Saya',
+      en: 'Get in Touch',
     },
     artCaption: {
-      id: 'Meja Korespondensi · Terinspirasi Violet Evergarden',
-      en: 'Correspondence Desk · Inspired by Violet Evergarden',
+      id: 'Ilustrasi jendela klasik, mesin tik, dan kelopak bunga di tepi kanal',
+      en: 'Classic window, typewriter, and drifting petals overlooking a canal town',
     },
     statGpaLabel: {
       id: 'IPK S1 Ilmu Komputer',
@@ -119,8 +119,8 @@ export const UI_STRINGS = {
   },
   projects: {
     sectionKicker: {
-      id: 'ARSIP 01 · KARYA PILIHAN',
-      en: 'DOSSIER 01 · SELECTED WORKS',
+      id: '01 · PROYEK PILIHAN',
+      en: '01 · SELECTED WORKS',
     },
     sectionTitle: {
       id: 'Proyek & Tangkapan Layar Langsung',
@@ -175,8 +175,8 @@ export const UI_STRINGS = {
   },
   experience: {
     sectionKicker: {
-      id: 'ARSIP 02 · PERJALANAN KARIER',
-      en: 'DOSSIER 02 · CHRONICLE',
+      id: '02 · PERJALANAN KARIER',
+      en: '02 · EXPERIENCE',
     },
     sectionTitle: {
       id: 'Pengalaman Kerja, Proyek & Pengajaran',
@@ -194,8 +194,8 @@ export const UI_STRINGS = {
   },
   opensource: {
     sectionKicker: {
-      id: 'ARSIP 03 · KOMUNITAS & KONTEN',
-      en: 'DOSSIER 03 · OPEN SOURCE & CREATOR',
+      id: '03 · OPEN SOURCE & EDUKASI',
+      en: '03 · OPEN SOURCE & CREATOR',
     },
     sectionTitle: {
       id: 'Open Source, PyPI & Konten Edukasi',
@@ -240,8 +240,8 @@ export const UI_STRINGS = {
   },
   skills: {
     sectionKicker: {
-      id: 'ARSIP 04 · KOMPETENSI & AKADEMIK',
-      en: 'DOSSIER 04 · CREDENTIALS',
+      id: '04 · KEAHLIAN & PENDIDIKAN',
+      en: '04 · SKILLS & EDUCATION',
     },
     sectionTitle: {
       id: 'Keahlian Teknis, Pendidikan & Sertifikasi',
@@ -266,8 +266,8 @@ export const UI_STRINGS = {
   },
   contact: {
     sectionKicker: {
-      id: 'ARSIP 05 · KORESPONDENSI',
-      en: 'DOSSIER 05 · CORRESPONDENCE',
+      id: '05 · KONTAK',
+      en: '05 · CONTACT',
     },
     sectionTitle: {
       id: 'Mari Berkolaborasi dalam Proyek Berikutnya',
@@ -294,14 +294,14 @@ export const UI_STRINGS = {
       en: 'Compose Email',
     },
     epigraph: {
-      id: '“Setiap baris kode yang ditulis dengan rapi adalah surat yang menjaga niat baik tetap hidup bagi penggunanya.”',
-      en: '“Every carefully crafted system is a letter that carries clarity and care straight to the people who rely on it.”',
+      id: 'Tersedia untuk peran penuh waktu, proyek web & backend, maupun kontribusi kolaboratif.',
+      en: 'Available for full-time engineering roles, backend & full-stack projects, and open-source collaboration.',
     },
   },
   footer: {
     builtWith: {
-      id: 'Dirancang dengan estetika Violet Evergarden · Dibangun dengan React, TypeScript & Tailwind CSS.',
-      en: 'Crafted in a Violet Evergarden editorial aesthetic · Built with React, TypeScript & Tailwind CSS.',
+      id: 'Full-Stack & Backend Developer · Bandar Lampung & Jakarta, Indonesia',
+      en: 'Full-Stack & Backend Developer · Bandar Lampung & Jakarta, Indonesia',
     },
     backToTop: {
       id: 'Kembali ke atas',

@@ -154,43 +154,47 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Framed Violet Evergarden Desk Artwork Column */}
+          {/* Framed Violet Evergarden Artwork Column */}
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.14, ease: 'easeOut' }}
+            initial={{ opacity: 0, y: 18, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.65, delay: 0.14, ease: 'easeOut' }}
             className="lg:col-span-5"
           >
-            <figure className="relative rounded-2xl border border-gold-brass/40 bg-surface p-2.5 shadow-[var(--shadow-editorial)]">
-              {/* Brass Corner Filigree */}
-              <span
+            <div className="relative">
+              {/* Soft emerald-gold ambient aura */}
+              <div
                 aria-hidden="true"
-                className="pointer-events-none absolute -left-1.5 -top-1.5 h-5 w-5 border-l-2 border-t-2 border-gold-brass/80 rounded-tl-md"
-              />
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-5 w-5 border-b-2 border-r-2 border-gold-brass/80 rounded-br-md"
+                className="pointer-events-none absolute -inset-4 rounded-3xl opacity-65 blur-2xl"
+                style={{
+                  background:
+                    'radial-gradient(circle at 30% 30%, var(--emerald-glow), transparent 60%), radial-gradient(circle at 75% 75%, color-mix(in srgb, var(--accent-gold) 24%, transparent), transparent 62%)',
+                }}
               />
 
-              <div className="relative overflow-hidden rounded-xl border border-hairline bg-subtle">
-                <img
-                  src={heroArtSrc}
-                  alt={t(UI_STRINGS.hero.artCaption)}
-                  width={1200}
-                  height={900}
-                  fetchPriority="high"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
-                />
-                <div
+              <figure className="ve-float-slow relative rounded-2xl border border-gold-brass/50 bg-surface/95 p-2.5 shadow-[var(--shadow-editorial)]">
+                {/* Brass Corner Filigree */}
+                <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0c1322]/45 via-transparent to-transparent"
+                  className="pointer-events-none absolute -left-1.5 -top-1.5 h-5 w-5 border-l-2 border-t-2 border-gold-brass/85 rounded-tl-md"
                 />
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2 rounded-lg border border-white/20 bg-[#0c1322]/75 px-3 py-1.5 text-[11px] font-mono text-[#f3ede0] backdrop-blur-xs">
-                  <span className="truncate">{t(UI_STRINGS.hero.artCaption)}</span>
-                  <span className="shrink-0 text-[#39bfa7]">CH · 01</span>
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-5 w-5 border-b-2 border-r-2 border-gold-brass/85 rounded-br-md"
+                />
+
+                <div className="relative overflow-hidden rounded-xl border border-hairline bg-subtle">
+                  <img
+                    src={heroArtSrc}
+                    alt={t(UI_STRINGS.hero.artCaption)}
+                    width={1200}
+                    height={900}
+                    fetchPriority="high"
+                    className="aspect-[4/3] w-full object-cover object-top transition-transform duration-700 hover:scale-[1.03]"
+                  />
                 </div>
-              </div>
-            </figure>
+              </figure>
+            </div>
           </motion.div>
         </div>
 

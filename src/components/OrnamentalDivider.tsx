@@ -1,17 +1,30 @@
+import { motion } from 'framer-motion'
+
 interface OrnamentalDividerProps {
-  label?: string
   className?: string
 }
 
-export function OrnamentalDivider({ label, className = '' }: OrnamentalDividerProps) {
+export function OrnamentalDivider({ className = '' }: OrnamentalDividerProps) {
   return (
     <div
-      className={`flex items-center justify-center gap-4 my-10 select-none ${className}`}
+      className={`flex items-center justify-center gap-4 my-8 select-none ${className}`}
       aria-hidden="true"
     >
-      <span className="h-px flex-1 bg-gradient-to-r from-transparent via-hairline to-gold-brass/50" />
-      <span className="inline-flex items-center gap-2.5 text-gold-brass">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="shrink-0">
+      <motion.span
+        initial={{ scaleX: 0, opacity: 0.3 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.65, ease: 'easeOut' }}
+        className="h-px flex-1 origin-right bg-gradient-to-r from-transparent via-hairline to-gold-brass/65"
+      />
+      <motion.span
+        initial={{ scale: 0.75, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.45, ease: 'easeOut' }}
+        className="inline-flex items-center gap-2 text-gold-brass"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="shrink-0">
           <path
             d="M12 2L17.5 12L12 22L6.5 12L12 2Z"
             fill="var(--accent-emerald)"
@@ -25,13 +38,14 @@ export function OrnamentalDivider({ label, className = '' }: OrnamentalDividerPr
           />
           <circle cx="12" cy="12" r="1.4" fill="var(--bg-surface)" />
         </svg>
-        {label ? (
-          <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-ink-muted">
-            {label}
-          </span>
-        ) : null}
-      </span>
-      <span className="h-px flex-1 bg-gradient-to-l from-transparent via-hairline to-gold-brass/50" />
+      </motion.span>
+      <motion.span
+        initial={{ scaleX: 0, opacity: 0.3 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.65, ease: 'easeOut' }}
+        className="h-px flex-1 origin-left bg-gradient-to-l from-transparent via-hairline to-gold-brass/65"
+      />
     </div>
   )
 }

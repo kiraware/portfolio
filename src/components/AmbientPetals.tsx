@@ -16,73 +16,126 @@ interface PetalSpec {
   variant: 'violet' | 'parchment'
 }
 
+interface BokehSpec {
+  id: string
+  left: string
+  top: string
+  size: number
+  delay: string
+  duration: string
+  driftX: string
+  opacity: number
+}
+
 const PETALS: PetalSpec[] = [
   {
     id: 'p1',
-    left: '6%',
+    left: '5%',
     delay: '-2s',
-    duration: '19s',
-    driftX: '42px',
+    duration: '18s',
+    driftX: '48px',
     rotate: '175deg',
-    scale: 1,
-    opacity: 0.34,
+    scale: 1.05,
+    opacity: 0.42,
     variant: 'violet',
   },
   {
     id: 'p2',
-    left: '19%',
+    left: '14%',
     delay: '-9s',
-    duration: '24s',
+    duration: '23s',
     driftX: '-36px',
     rotate: '220deg',
-    scale: 0.85,
-    opacity: 0.28,
+    scale: 0.9,
+    opacity: 0.34,
     variant: 'parchment',
   },
   {
     id: 'p3',
-    left: '34%',
+    left: '26%',
     delay: '-5s',
-    duration: '21s',
-    driftX: '54px',
+    duration: '20s',
+    driftX: '58px',
     rotate: '140deg',
-    scale: 1.05,
-    opacity: 0.3,
+    scale: 1.15,
+    opacity: 0.38,
     variant: 'violet',
   },
   {
     id: 'p4',
-    left: '52%',
+    left: '38%',
     delay: '-14s',
-    duration: '26s',
+    duration: '25s',
     driftX: '-48px',
     rotate: '205deg',
-    scale: 0.9,
-    opacity: 0.26,
+    scale: 0.95,
+    opacity: 0.32,
     variant: 'parchment',
   },
   {
     id: 'p5',
-    left: '71%',
-    delay: '-6s',
-    duration: '20s',
-    driftX: '34px',
-    rotate: '190deg',
+    left: '51%',
+    delay: '-4s',
+    duration: '19s',
+    driftX: '40px',
+    rotate: '195deg',
     scale: 1.1,
-    opacity: 0.32,
+    opacity: 0.4,
     variant: 'violet',
   },
   {
     id: 'p6',
-    left: '88%',
-    delay: '-11s',
-    duration: '23s',
-    driftX: '-40px',
-    rotate: '160deg',
-    scale: 0.95,
-    opacity: 0.28,
+    left: '64%',
+    delay: '-12s',
+    duration: '22s',
+    driftX: '-44px',
+    rotate: '165deg',
+    scale: 0.88,
+    opacity: 0.35,
     variant: 'parchment',
   },
+  {
+    id: 'p7',
+    left: '77%',
+    delay: '-7s',
+    duration: '17s',
+    driftX: '34px',
+    rotate: '190deg',
+    scale: 1.12,
+    opacity: 0.42,
+    variant: 'violet',
+  },
+  {
+    id: 'p8',
+    left: '89%',
+    delay: '-11s',
+    duration: '24s',
+    driftX: '-42px',
+    rotate: '155deg',
+    scale: 0.96,
+    opacity: 0.36,
+    variant: 'parchment',
+  },
+  {
+    id: 'p9',
+    left: '95%',
+    delay: '-16s',
+    duration: '21s',
+    driftX: '-30px',
+    rotate: '210deg',
+    scale: 0.85,
+    opacity: 0.34,
+    variant: 'violet',
+  },
+]
+
+const BOKEH_MOTES: BokehSpec[] = [
+  { id: 'b1', left: '12%', top: '68%', size: 8, delay: '-1s', duration: '9s', driftX: '18px', opacity: 0.55 },
+  { id: 'b2', left: '28%', top: '82%', size: 11, delay: '-4s', duration: '11s', driftX: '-22px', opacity: 0.45 },
+  { id: 'b3', left: '47%', top: '74%', size: 7, delay: '-7s', duration: '8.5s', driftX: '24px', opacity: 0.5 },
+  { id: 'b4', left: '66%', top: '86%', size: 10, delay: '-2.5s', duration: '12s', driftX: '-16px', opacity: 0.48 },
+  { id: 'b5', left: '83%', top: '70%', size: 9, delay: '-5.5s', duration: '10s', driftX: '20px', opacity: 0.52 },
+  { id: 'b6', left: '92%', top: '52%', size: 6, delay: '-3s', duration: '9.5s', driftX: '-14px', opacity: 0.46 },
 ]
 
 export function AmbientPetals() {
@@ -98,6 +151,34 @@ export function AmbientPetals() {
         className="pointer-events-none absolute inset-0 overflow-hidden select-none"
         aria-hidden="true"
       >
+        {/* Warm golden firefly bokeh motes */}
+        {BOKEH_MOTES.map((mote) => {
+          const style: CSSProperties = {
+            left: mote.left,
+            top: mote.top,
+            width: mote.size,
+            height: mote.size,
+            animationDelay: mote.delay,
+            animationDuration: mote.duration,
+            ['--bokeh-drift-x' as string]: mote.driftX,
+            ['--bokeh-opacity' as string]: String(mote.opacity),
+            background:
+              'radial-gradient(circle, var(--accent-gold) 0%, var(--accent-emerald) 65%, transparent 100%)',
+            boxShadow: '0 0 12px var(--accent-gold)',
+          }
+
+          return (
+            <span
+              key={mote.id}
+              style={style}
+              className={`absolute rounded-full opacity-0 ve-bokeh-active ${
+                paused ? 've-petal-paused' : ''
+              }`}
+            />
+          )
+        })}
+
+        {/* Drifting violet petals & fluttering ivory envelopes */}
         {PETALS.map((petal) => {
           const style: CSSProperties = {
             left: petal.left,
@@ -125,22 +206,22 @@ export function AmbientPetals() {
                   <path
                     d="M9 1C13.5 4.2 16.5 9.2 15.2 14.8C14.1 19.2 10.6 21 9 21C7.4 21 3.9 19.2 2.8 14.8C1.5 9.2 4.5 4.2 9 1Z"
                     fill="var(--accent-prussian)"
-                    fillOpacity="0.45"
+                    fillOpacity="0.52"
                     stroke="var(--accent-gold)"
-                    strokeOpacity="0.55"
-                    strokeWidth="0.8"
+                    strokeOpacity="0.65"
+                    strokeWidth="0.9"
                   />
                   <path
                     d="M9 3.5V18"
                     stroke="var(--accent-gold)"
-                    strokeOpacity="0.4"
+                    strokeOpacity="0.48"
                     strokeWidth="0.7"
                   />
                 </svg>
               ) : (
                 <svg
-                  width={Math.round(16 * petal.scale)}
-                  height={Math.round(12 * petal.scale)}
+                  width={Math.round(18 * petal.scale)}
+                  height={Math.round(13 * petal.scale)}
                   viewBox="0 0 20 14"
                   fill="none"
                 >
@@ -151,15 +232,15 @@ export function AmbientPetals() {
                     height="12"
                     rx="1.5"
                     fill="var(--bg-surface)"
-                    fillOpacity="0.7"
+                    fillOpacity="0.82"
                     stroke="var(--accent-gold)"
-                    strokeOpacity="0.65"
+                    strokeOpacity="0.75"
                     strokeWidth="1"
                   />
                   <path
                     d="M1.5 2L10 8.2L18.5 2"
                     stroke="var(--accent-emerald)"
-                    strokeOpacity="0.7"
+                    strokeOpacity="0.8"
                     strokeWidth="1"
                   />
                 </svg>

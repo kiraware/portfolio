@@ -154,8 +154,8 @@ describe('Header, AmbientPetals, and Hero components', () => {
     ).toBeInTheDocument()
     expect(screen.getByText('3.87/4.00')).toBeInTheDocument()
 
-    const heroImg = screen.getByAltText(/Meja Korespondensi/i)
-    expect(heroImg.getAttribute('src')).toContain('art/hero-leiden-desk.jpg')
+    const heroImg = screen.getByAltText(/Ilustrasi jendela klasik/i)
+    expect(heroImg.getAttribute('src')).toContain('art/hero-violet-scene.jpg')
 
     expect(screen.getByRole('link', { name: /GitHub/i })).toHaveAttribute(
       'href',

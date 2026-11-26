@@ -165,7 +165,7 @@ export function ContactSection() {
               <div className="overflow-hidden rounded-2xl border border-hairline bg-subtle">
                 <img
                   src={resolveAssetUrl(PROFILE.contactArtwork)}
-                  alt="CH Postal sealed letter envelope with emerald silk ribbon and violet flowers"
+                  alt=""
                   width={1200}
                   height={675}
                   loading="lazy"

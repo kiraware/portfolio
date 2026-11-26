@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import { Menu, Moon, Sun, Languages } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
 import { useLanguage } from '../context/useLanguage'
@@ -12,6 +13,8 @@ export function Header() {
   const { locale, toggleLocale, t } = useLanguage()
   const [drawerOpen, setDrawerOpen] = useState(false)
   const handleCloseDrawer = useCallback(() => setDrawerOpen(false), [])
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, { stiffness: 160, damping: 28, restDelta: 0.001 })
 
   const themeLabel =
     renderedScheme === 'dark' ? t(UI_STRINGS.switchToLight) : t(UI_STRINGS.switchToDark)
@@ -102,6 +105,11 @@ export function Header() {
             </button>
           </div>
         </div>
+        <motion.div
+          aria-hidden="true"
+          style={{ scaleX }}
+          className="h-[2px] w-full origin-left bg-gradient-to-r from-prussian via-emerald-brooch to-gold-brass"
+        />
       </header>
 
       <MobileDrawer isOpen={drawerOpen} onClose={handleCloseDrawer} navItems={NAV_ITEMS} />

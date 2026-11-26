@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "src/App.tsx": {
-    "mtime": 1795664915.6068883,
-    "seen": 1795664979.5165787,
-    "ast_hash": "530456c78aeeaec46fb38c514ac12b67",
+    "mtime": 1795667029.762177,
+    "seen": 1795667125.1583962,
+    "ast_hash": "3eada9231d8ce91a692e751162a60293",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -138,21 +138,15 @@
     "semantic_hash": ""
   },
   "public/screenshots/manifest.json": {
-    "mtime": 1795664146.9441144,
-    "seen": 1795664205.6592333,
-    "ast_hash": "872ab1268e636510e3032e490b3c642b",
+    "mtime": 1795666908.314108,
+    "seen": 1795667125.1583962,
+    "ast_hash": "48b3af4de252554b4d50b739d2355670",
     "semantic_hash": ""
   },
   "public/art/contact-envelope.jpg": {
     "mtime": 1795662783.448696,
     "seen": 1795664205.6592333,
     "ast_hash": "97f821a5d4c7aa401be04f7365b8d9b1",
-    "semantic_hash": ""
-  },
-  "public/art/hero-leiden-desk.jpg": {
-    "mtime": 1795662770.5451138,
-    "seen": 1795664205.6592333,
-    "ast_hash": "40d0fc03b4c909ec0a1ca48db8823e00",
     "semantic_hash": ""
   },
   "public/screenshots/drive-pesawaran-folders.png": {
@@ -228,9 +222,9 @@
     "semantic_hash": ""
   },
   "src/data/data.test.ts": {
-    "mtime": 1795665523.6250849,
-    "seen": 1795665804.2526503,
-    "ast_hash": "9674df18c27925132a3101560d58f354",
+    "mtime": 1795666905.0617363,
+    "seen": 1795667125.1583962,
+    "ast_hash": "26a8af073ed01b38a3488d5860ca1368",
     "semantic_hash": ""
   },
   "src/data/experience.ts": {
@@ -240,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/data/i18n.ts": {
-    "mtime": 1795665586.2060025,
-    "seen": 1795665804.2526503,
-    "ast_hash": "494e3be6424018aba0545c4b81085f6a",
+    "mtime": 1795666741.892648,
+    "seen": 1795667125.1583962,
+    "ast_hash": "01eeb4d268c10338556cf79a6ef86a8b",
     "semantic_hash": ""
   },
   "src/data/opensource.ts": {
@@ -252,9 +246,9 @@
     "semantic_hash": ""
   },
   "src/data/profile.ts": {
-    "mtime": 1795664376.9284568,
-    "seen": 1795664452.195094,
-    "ast_hash": "39a4f442631c55b705982c93e5711ab7",
+    "mtime": 1795666815.441594,
+    "seen": 1795667125.1583962,
+    "ast_hash": "e1890b133a23ffec7985277a9b0d5759",
     "semantic_hash": ""
   },
   "src/data/projects.ts": {
@@ -270,9 +264,9 @@
     "semantic_hash": ""
   },
   "src/components/AmbientPetals.tsx": {
-    "mtime": 1795665592.0759852,
-    "seen": 1795665804.2526503,
-    "ast_hash": "f9beb6886fc177729554d1e8cd979467",
+    "mtime": 1795666869.5944304,
+    "seen": 1795667125.1583962,
+    "ast_hash": "3127360ba5a6dd691ff53e49727dbddc",
     "semantic_hash": ""
   },
   "src/components/BrandIcons.tsx": {
@@ -282,21 +276,21 @@
     "semantic_hash": ""
   },
   "src/components/Header.tsx": {
-    "mtime": 1795665597.5494306,
-    "seen": 1795665804.2526503,
-    "ast_hash": "df4e6b65a1eca9caf8ef2649c7afc73c",
+    "mtime": 1795666873.2174242,
+    "seen": 1795667125.1583962,
+    "ast_hash": "01cc6c6b60df4670de307f3890e032c9",
     "semantic_hash": ""
   },
   "src/components/HeaderAndHero.test.tsx": {
-    "mtime": 1795665736.5372136,
-    "seen": 1795665804.2526503,
-    "ast_hash": "655e8585732c031b5757456e59d7e89a",
+    "mtime": 1795666906.4346993,
+    "seen": 1795667125.1583962,
+    "ast_hash": "bcc96d72ad17a066d3814da32e946274",
     "semantic_hash": ""
   },
   "src/components/Hero.tsx": {
-    "mtime": 1795665071.690832,
-    "seen": 1795665144.9695547,
-    "ast_hash": "8d026e2e8be01948b7bd294bdd6ce79f",
+    "mtime": 1795666874.1491766,
+    "seen": 1795667125.1583962,
+    "ast_hash": "9244dd67b80d2e637283ce6746602ead",
     "semantic_hash": ""
   },
   "src/components/MobileDrawer.tsx": {
@@ -306,9 +300,9 @@
     "semantic_hash": ""
   },
   "src/components/OrnamentalDivider.tsx": {
-    "mtime": 1795664538.714547,
-    "seen": 1795664659.3924165,
-    "ast_hash": "aba0d58501ab690bbae0cfe02e6c9818",
+    "mtime": 1795666820.5448508,
+    "seen": 1795667125.1583962,
+    "ast_hash": "e3377586973c3c62ebd63bc032e3fc0f",
     "semantic_hash": ""
   },
   "src/components/ProjectModal.tsx": {
@@ -324,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/components/ProjectsSection.tsx": {
-    "mtime": 1795665676.8610675,
-    "seen": 1795665804.2526503,
-    "ast_hash": "befdcdd05241b6d53e8685deac6e38c6",
+    "mtime": 1795667032.583736,
+    "seen": 1795667125.1583962,
+    "ast_hash": "2462b80d2f76a62257f1c84216a6c171",
     "semantic_hash": ""
   },
   "src/components/SiakaduPreview.tsx": {
@@ -342,15 +336,15 @@
     "semantic_hash": ""
   },
   "src/components/ContactSection.tsx": {
-    "mtime": 1795665690.5176904,
-    "seen": 1795665804.2526503,
-    "ast_hash": "9a5d778f7d3f7edf220fa9ad102e965a",
+    "mtime": 1795666907.513676,
+    "seen": 1795667125.1583962,
+    "ast_hash": "163080a9a35f676f415088b303ec1b00",
     "semantic_hash": ""
   },
   "src/components/ExperienceSection.tsx": {
-    "mtime": 1795665682.1203835,
-    "seen": 1795665804.2526503,
-    "ast_hash": "7c506ee072ba5e9cd2561f4c610ab07c",
+    "mtime": 1795667033.7698603,
+    "seen": 1795667125.1583962,
+    "ast_hash": "6f3df0ac3c9d771fdd8d7e6f3d69e84f",
     "semantic_hash": ""
   },
   "src/components/Footer.tsx": {
@@ -375,6 +369,42 @@
     "mtime": 1795665580.9272919,
     "seen": 1795665804.2526503,
     "ast_hash": "7a1feff603275f3d5a12531a0392ebf1",
+    "semantic_hash": ""
+  },
+  "src/components/ScenicInterlude.tsx": {
+    "mtime": 1795666819.114566,
+    "seen": 1795667125.1583962,
+    "ast_hash": "ca5089ebf2ee86ef0031424af28d54ed",
+    "semantic_hash": ""
+  },
+  "src/components/ThemeBackdrop.tsx": {
+    "mtime": 1795667028.2834013,
+    "seen": 1795667125.1583962,
+    "ast_hash": "fdfea1e25832ff64e602a8254494e743",
+    "semantic_hash": ""
+  },
+  "public/art/banner-lake-reflections.jpg": {
+    "mtime": 1795666719.9677033,
+    "seen": 1795667125.1583962,
+    "ast_hash": "4a84484fc24f881341a377d2ca4634f2",
+    "semantic_hash": ""
+  },
+  "public/art/bg-leiden-day.jpg": {
+    "mtime": 1795666704.2073734,
+    "seen": 1795667125.1583962,
+    "ast_hash": "a4486ba12bf1677e285d8316f7a6a4e5",
+    "semantic_hash": ""
+  },
+  "public/art/bg-leiden-night.jpg": {
+    "mtime": 1795666714.6999567,
+    "seen": 1795667125.1583962,
+    "ast_hash": "c3d21c5d807931fa5db07b32d93b8aec",
+    "semantic_hash": ""
+  },
+  "public/art/hero-violet-scene.jpg": {
+    "mtime": 1795666705.7767744,
+    "seen": 1795667125.1583962,
+    "ast_hash": "f18ce5c1367e5fd29031614b991c3c2f",
     "semantic_hash": ""
   },
   "pnpm-lock.yaml": {

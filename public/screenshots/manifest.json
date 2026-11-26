@@ -3,13 +3,28 @@
   "viewport": "1280x800",
   "artwork": [
     {
-      "file": "art/hero-leiden-desk.jpg",
-      "usage": "Hero editorial desk illustration (Violet Evergarden aesthetic)",
+      "file": "art/hero-violet-scene.jpg",
+      "usage": "Hero showcase illustration",
       "aspectRatio": "4:3"
     },
     {
+      "file": "art/bg-leiden-day.jpg",
+      "usage": "Light mode full-viewport scenic canal backdrop",
+      "aspectRatio": "16:9"
+    },
+    {
+      "file": "art/bg-leiden-night.jpg",
+      "usage": "Dark mode full-viewport starlit canal backdrop",
+      "aspectRatio": "16:9"
+    },
+    {
+      "file": "art/banner-lake-reflections.jpg",
+      "usage": "Parallax autumn lake scenic interlude between Projects and Experience",
+      "aspectRatio": "16:9"
+    },
+    {
       "file": "art/contact-envelope.jpg",
-      "usage": "Contact Dispatch sealed envelope illustration",
+      "usage": "Contact section sealed letter illustration",
       "aspectRatio": "16:9"
     }
   ],

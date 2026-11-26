@@ -190,11 +190,91 @@ body {
   contain-intrinsic-size: auto 720px;
 }
 
-/* Editorial card surface */
+/* Editorial card surface with delicate glass translucency over scenic backdrop */
 .dossier-card {
-  background-color: var(--bg-surface);
+  background-color: color-mix(in srgb, var(--bg-surface) 92%, transparent);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--border-hairline);
   box-shadow: var(--shadow-editorial);
+}
+
+/* Dual-mode Violet Evergarden Leiden scenic backdrop visibility (zero FOUC) */
+.ve-bg-layer {
+  transition: opacity 0.65s ease-in-out;
+}
+
+.ve-bg-day {
+  opacity: 0.48;
+}
+
+.ve-bg-night {
+  opacity: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ve-bg-day {
+    opacity: 0;
+  }
+
+  .ve-bg-night {
+    opacity: 0.56;
+  }
+}
+
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .ve-bg-day {
+  opacity: 0;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .ve-bg-night {
+  opacity: 0.56;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="light"]) .ve-bg-day {
+  opacity: 0.48;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="light"]) .ve-bg-night {
+  opacity: 0;
+}
+
+/* Soft floating frame & golden firefly bokeh (compositor-only, opt-in to motion) */
+@keyframes ve-float-gentle {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+@keyframes ve-bokeh-drift {
+  0% {
+    transform: translate3d(0, 12px, 0) scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    opacity: var(--bokeh-opacity, 0.55);
+  }
+  70% {
+    opacity: var(--bokeh-opacity, 0.55);
+  }
+  100% {
+    transform: translate3d(var(--bokeh-drift-x, 22px), -72px, 0) scale(1.15);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ve-float-slow {
+    animation: ve-float-gentle 7s ease-in-out infinite;
+  }
+
+  .ve-bokeh-active {
+    animation-name: ve-bokeh-drift;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
 }
 
 /* Ambient drifting petals & parchment letters (compositor-only, opt-in to motion) */

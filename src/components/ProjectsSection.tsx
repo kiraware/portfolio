@@ -45,13 +45,20 @@ export function ProjectsSection() {
                   type="button"
                   aria-pressed={active}
                   onClick={() => setCategory(cat)}
-                  className={`min-h-11 rounded-full border px-4 py-2 text-xs font-semibold transition-colors cursor-pointer ${
+                  className={`relative isolate overflow-hidden min-h-11 rounded-full border px-4 py-2 text-xs font-semibold transition-colors cursor-pointer ${
                     active
-                      ? 'border-emerald-brooch bg-emerald-brooch text-on-emerald shadow-xs'
-                      : 'border-hairline bg-surface text-ink-muted hover:border-gold-brass hover:text-ink'
+                      ? 'border-emerald-brooch text-on-emerald'
+                      : 'border-hairline bg-surface/90 text-ink-muted hover:border-gold-brass hover:text-ink'
                   }`}
                 >
-                  {t(UI_STRINGS.projects.filters[cat])}
+                  {active ? (
+                    <motion.span
+                      layoutId="projects-filter-pill"
+                      transition={{ type: 'spring', stiffness: 360, damping: 30 }}
+                      className="absolute inset-0 z-0 rounded-full bg-emerald-brooch shadow-xs"
+                    />
+                  ) : null}
+                  <span className="relative z-10">{t(UI_STRINGS.projects.filters[cat])}</span>
                 </button>
               )
             })}
