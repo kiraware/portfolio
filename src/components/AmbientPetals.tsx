@@ -90,6 +90,7 @@ export function AmbientPetals() {
   const [paused, setPaused] = useState(false)
 
   const toggleLabel = paused ? t(UI_STRINGS.ambientPlay) : t(UI_STRINGS.ambientPause)
+  const shortLabel = paused ? t(UI_STRINGS.ambientPlayShort) : t(UI_STRINGS.ambientPauseShort)
 
   return (
     <>
@@ -181,7 +182,7 @@ export function AmbientPetals() {
         ) : (
           <Pause className="h-3.5 w-3.5 text-gold-brass" aria-hidden="true" />
         )}
-        <span className="hidden sm:inline">{paused ? 'Play' : 'Pause'}</span>
+        <span className="hidden sm:inline">{shortLabel}</span>
       </button>
     </>
   )

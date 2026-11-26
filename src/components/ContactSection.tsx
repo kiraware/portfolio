@@ -1,24 +1,38 @@
-import { useState } from 'react'
-import { Check, Copy, Mail, Package, Send } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { AlertCircle, Check, Copy, Mail, Package, Send } from 'lucide-react'
 import { useLanguage } from '../context/useLanguage'
 import { resolveAssetUrl } from '../lib/assetUrl'
+import { copyToClipboard } from '../lib/copyText'
 import { PROFILE } from '../data/profile'
 import { UI_STRINGS } from '../data/i18n'
 import { GithubIcon, LinkedinIcon, YoutubeIcon } from './BrandIcons'
 import { WaxSealMonogram } from './OrnamentalDivider'
 
+type CopyState = 'idle' | 'copied' | 'error'
+
 export function ContactSection() {
   const { t } = useLanguage()
-  const [copied, setCopied] = useState(false)
+  const [copyState, setCopyState] = useState<CopyState>('idle')
+  const timerRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current !== null) {
+        window.clearTimeout(timerRef.current)
+      }
+    }
+  }, [])
 
   const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard?.writeText(PROFILE.email)
-    } catch {
-      // Clipboard API may be unavailable in restricted contexts
+    const ok = await copyToClipboard(PROFILE.email)
+    if (timerRef.current !== null) {
+      window.clearTimeout(timerRef.current)
     }
-    setCopied(true)
-    window.setTimeout(() => setCopied(false), 2200)
+    setCopyState(ok ? 'copied' : 'error')
+    timerRef.current = window.setTimeout(() => {
+      setCopyState('idle')
+      timerRef.current = null
+    }, 2200)
   }
 
   return (
@@ -67,12 +81,17 @@ export function ContactSection() {
                     onClick={handleCopyEmail}
                     className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-gold-brass/60 bg-surface px-4 py-2.5 text-xs font-semibold text-ink transition-colors hover:border-gold-brass hover:bg-subtle cursor-pointer"
                   >
-                    {copied ? (
+                    {copyState === 'copied' ? (
                       <>
                         <Check className="h-4 w-4 text-emerald-brooch" aria-hidden="true" />
                         <span className="text-emerald-brooch">
                           {t(UI_STRINGS.contact.emailCopied)}
                         </span>
+                      </>
+                    ) : copyState === 'error' ? (
+                      <>
+                        <AlertCircle className="h-4 w-4 text-gold-brass" aria-hidden="true" />
+                        <span>{t(UI_STRINGS.contact.copyFailed)}</span>
                       </>
                     ) : (
                       <>
@@ -81,6 +100,14 @@ export function ContactSection() {
                       </>
                     )}
                   </button>
+
+                  <p role="status" aria-live="polite" className="sr-only">
+                    {copyState === 'copied'
+                      ? t(UI_STRINGS.contact.emailCopied)
+                      : copyState === 'error'
+                        ? t(UI_STRINGS.contact.copyFailed)
+                        : ''}
+                  </p>
 
                   <a
                     href={`mailto:${PROFILE.email}`}

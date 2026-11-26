@@ -110,7 +110,7 @@ export function SkillsEducationSection() {
                     </h3>
                     <p className="mt-1 text-xs leading-relaxed text-ink-muted">{t(cert.issuer)}</p>
                   </div>
-                  <span className="shrink-0 rounded-full border border-gold-brass/40 bg-subtle px-3 py-1 font-mono text-xs font-semibold text-gold-brass">
+                  <span className="shrink-0 rounded-full border border-gold-brass/55 bg-surface px-3 py-1 font-mono text-xs font-semibold text-gold-brass">
                     {cert.year}
                   </span>
                 </div>

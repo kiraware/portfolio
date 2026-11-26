@@ -18,6 +18,11 @@ export function MobileDrawer({ isOpen, onClose, navItems }: MobileDrawerProps) {
   const dialogRef = useRef<HTMLDialogElement>(null)
   const scrollerRef = useRef<HTMLDivElement>(null)
   const sheetRef = useRef<HTMLDivElement>(null)
+  const onCloseRef = useRef(onClose)
+
+  useEffect(() => {
+    onCloseRef.current = onClose
+  }, [onClose])
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -35,27 +40,48 @@ export function MobileDrawer({ isOpen, onClose, navItems }: MobileDrawerProps) {
       typeof CSS.supports === 'function' &&
       CSS.supports('scroll-initial-target: nearest')
 
+    let raf1 = 0
+    let raf2 = 0
+
     if (isOpen) {
       if (!dialog.open && typeof dialog.showModal === 'function') {
         dialog.showModal()
       }
-      if (!supportsInitialTarget) {
-        scroller.scrollLeft = sheet.offsetWidth || 320
-      }
-      requestAnimationFrame(() => {
+
+      const slideIn = () => {
         if (typeof scroller.scrollTo === 'function') {
-          scroller.scrollTo({ left: 0, behavior: 'smooth' })
+          // behavior: 'auto' lets CSS @media (prefers-reduced-motion: no-preference) govern smooth scroll
+          scroller.scrollTo({ left: 0, behavior: 'auto' })
         } else {
           scroller.scrollLeft = 0
         }
         if (!supportsScrollTimeline) {
           dialog.style.setProperty('--drawer-backdrop', '1')
         }
-      })
+      }
+
+      if (!supportsInitialTarget) {
+        const startLeft = sheet.offsetWidth || 320
+        if (typeof scroller.scrollTo === 'function') {
+          scroller.scrollTo({ left: startLeft, behavior: 'instant' as ScrollBehavior })
+        } else {
+          scroller.scrollLeft = startLeft
+        }
+        raf1 = requestAnimationFrame(() => {
+          raf2 = requestAnimationFrame(slideIn)
+        })
+      } else {
+        raf1 = requestAnimationFrame(slideIn)
+      }
     } else if (dialog.open) {
       if (typeof dialog.close === 'function') {
         dialog.close()
       }
+    }
+
+    return () => {
+      cancelAnimationFrame(raf1)
+      cancelAnimationFrame(raf2)
     }
   }, [isOpen])
 
@@ -79,17 +105,24 @@ export function MobileDrawer({ isOpen, onClose, navItems }: MobileDrawerProps) {
     }
 
     const handleClose = () => {
-      onClose()
+      onCloseRef.current()
     }
 
     const handleCancel = (event: Event) => {
       event.preventDefault()
-      onClose()
+      onCloseRef.current()
+    }
+
+    const handleBackdropClick = (event: MouseEvent) => {
+      if (sheetRef.current && !sheetRef.current.contains(event.target as Node)) {
+        onCloseRef.current()
+      }
     }
 
     scroller.addEventListener('scroll', handleScroll, { passive: true })
     dialog.addEventListener('close', handleClose)
     dialog.addEventListener('cancel', handleCancel)
+    dialog.addEventListener('click', handleBackdropClick)
 
     let observer: IntersectionObserver | null = null
     if (typeof IntersectionObserver !== 'undefined') {
@@ -102,7 +135,7 @@ export function MobileDrawer({ isOpen, onClose, navItems }: MobileDrawerProps) {
             hasOpenedFully = true
           } else if (hasOpenedFully && entry.intersectionRatio === 0 && dialog.open) {
             hasOpenedFully = false
-            onClose()
+            onCloseRef.current()
           }
         },
         { root: scroller, threshold: [0, 0.9] },
@@ -114,9 +147,10 @@ export function MobileDrawer({ isOpen, onClose, navItems }: MobileDrawerProps) {
       scroller.removeEventListener('scroll', handleScroll)
       dialog.removeEventListener('close', handleClose)
       dialog.removeEventListener('cancel', handleCancel)
+      dialog.removeEventListener('click', handleBackdropClick)
       observer?.disconnect()
     }
-  }, [onClose])
+  }, [])
 
   return (
     <dialog
@@ -125,15 +159,7 @@ export function MobileDrawer({ isOpen, onClose, navItems }: MobileDrawerProps) {
       aria-label={t(UI_STRINGS.navAriaLabel)}
       className="ve-drawer"
     >
-      <div
-        ref={scrollerRef}
-        className="ve-drawer-scroller"
-        onClick={(event) => {
-          if (event.target === scrollerRef.current) {
-            onClose()
-          }
-        }}
-      >
+      <div ref={scrollerRef} className="ve-drawer-scroller">
         <div ref={sheetRef} className="ve-drawer-sheet">
           <div className="flex items-center justify-between border-b border-hairline px-5 py-4">
             <div className="flex items-center gap-3">

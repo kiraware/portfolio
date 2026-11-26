@@ -109,6 +109,9 @@ describe('Portfolio bilingual CV and project data integrity', () => {
     expect(teachingEntries.length).toBeGreaterThanOrEqual(3)
     expect(EXPERIENCES.some((e) => e.organization.id.includes('PT TASPEN'))).toBe(true)
     expect(EXPERIENCES.some((e) => e.organization.id.includes('Kayla Multi Interior'))).toBe(true)
+
+    const cssProject = PROJECTS.find((p) => p.id === 'css-himakom-unila')
+    expect(cssProject?.editorialFallback?.domainLabel).not.toContain('css.himakomunila.org')
   })
 
   it('exposes verified profile URLs and academic credentials', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { render, screen, within } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MotionConfig } from 'framer-motion'
 import { LanguageProvider } from '../context/LanguageContext'
@@ -99,11 +99,50 @@ describe('Header, AmbientPetals, and Hero components', () => {
 
     const pauseBtn = screen.getByRole('button', { name: /jeda animasi kelopak/i })
     expect(pauseBtn).not.toHaveAttribute('aria-pressed')
+    // WCAG 2.5.3 Label in Name: visible label matches localized Indonesian text and starts accessible name
+    expect(pauseBtn).toHaveTextContent('Jeda')
+    expect(pauseBtn.getAttribute('aria-label')?.startsWith('Jeda')).toBe(true)
 
     await user.click(pauseBtn)
 
-    const playBtn = screen.getByRole('button', { name: /jalankan animasi kelopak/i })
+    const playBtn = screen.getByRole('button', { name: /putar animasi kelopak/i })
     expect(playBtn).not.toHaveAttribute('aria-pressed')
+    expect(playBtn).toHaveTextContent('Putar')
+    expect(playBtn.getAttribute('aria-label')?.startsWith('Putar')).toBe(true)
+  })
+
+  it('closes MobileDrawer when clicking outside sheet on dialog backdrop without re-creating IntersectionObserver on header re-renders', async () => {
+    setupMetaAndMatchMedia(false)
+    const user = userEvent.setup()
+    const observeSpy = vi.spyOn(IntersectionObserver.prototype, 'observe')
+
+    HTMLDialogElement.prototype.showModal = vi.fn(function (this: HTMLDialogElement) {
+      this.setAttribute('open', '')
+    })
+    HTMLDialogElement.prototype.close = vi.fn(function (this: HTMLDialogElement) {
+      this.removeAttribute('open')
+      this.dispatchEvent(new Event('close'))
+    })
+
+    renderWithProviders()
+
+    const initialObserveCalls = observeSpy.mock.calls.length
+    expect(initialObserveCalls).toBe(1)
+
+    // Toggle theme in Header -> should NOT recreate MobileDrawer's IntersectionObserver
+    await user.click(screen.getByRole('button', { name: /aktifkan mode gelap/i }))
+    expect(observeSpy.mock.calls.length).toBe(initialObserveCalls)
+
+    // Open mobile drawer and click directly on <dialog> outside the sheet -> closes drawer
+    const menuBtn = screen.getByRole('button', { name: /buka menu navigasi/i })
+    await user.click(menuBtn)
+    expect(menuBtn).toHaveAttribute('aria-expanded', 'true')
+
+    const drawer = document.getElementById('mobile-nav-drawer') as HTMLDialogElement
+    fireEvent.click(drawer)
+    expect(menuBtn).toHaveAttribute('aria-expanded', 'false')
+
+    observeSpy.mockRestore()
   })
 
   it('renders Cakrawangsa Praba Alkautsar, GPA 3.87/4.00, desk artwork, and verified links without raw phone number', () => {

@@ -75,8 +75,34 @@ describe('Full Violet Evergarden Portfolio App integration', () => {
     expect(within(ossSection).getByText('@PraveInc')).toBeInTheDocument()
 
     const copyButtons = within(ossSection).getAllByRole('button', { name: /Salin perintah/i })
+    // WCAG 2.5.3 Label in Name: localized visible label matches start of aria-label
+    expect(copyButtons[0]).toHaveTextContent('Salin')
+    expect(copyButtons[0]?.getAttribute('aria-label')?.startsWith('Salin')).toBe(true)
+
     await user.click(copyButtons[0]!)
-    expect(within(ossSection).getByText(/Tersalin!/i)).toBeInTheDocument()
+    expect(within(ossSection).getByRole('status')).toHaveTextContent(/Tersalin/i)
+  })
+
+  it('does not falsely claim copied when clipboard fails in OpenSourceSection and ContactSection', async () => {
+    const user = userEvent.setup()
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { writeText: vi.fn().mockRejectedValue(new Error('Permission denied')) },
+    })
+    document.execCommand = vi.fn().mockReturnValue(false)
+
+    render(<App />)
+
+    const ossSection = document.getElementById('opensource')!
+    const copyButtons = within(ossSection).getAllByRole('button', { name: /Salin perintah/i })
+    await user.click(copyButtons[0]!)
+    expect(within(ossSection).queryByText(/Tersalin!/i)).not.toBeInTheDocument()
+    expect(within(ossSection).getByRole('status')).toHaveTextContent(/Gagal menyalin/i)
+
+    const contactSection = document.getElementById('contact')!
+    await user.click(within(contactSection).getByRole('button', { name: /Salin Alamat Email/i }))
+    expect(within(contactSection).queryByText(/Email Tersalin/i)).not.toBeInTheDocument()
+    expect(within(contactSection).getByRole('status')).toHaveTextContent(/Gagal menyalin/i)
   })
 
   it('supports copying email in Contact section and translates the entire page ID <-> EN', async () => {
@@ -89,7 +115,7 @@ describe('Full Violet Evergarden Portfolio App integration', () => {
     ).toBeInTheDocument()
 
     await user.click(within(contactSection).getByRole('button', { name: /Salin Alamat Email/i }))
-    expect(within(contactSection).getByText(/Email Tersalin/i)).toBeInTheDocument()
+    expect(within(contactSection).getByRole('status')).toHaveTextContent(/Email Tersalin/i)
 
     // Switch entire page from ID to EN
     await user.click(screen.getByRole('button', { name: /Ganti bahasa ke Inggris/i }))

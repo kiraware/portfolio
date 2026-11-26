@@ -68,8 +68,16 @@ export const UI_STRINGS = {
     en: 'Pause floating petals',
   },
   ambientPlay: {
-    id: 'Jalankan animasi kelopak',
+    id: 'Putar animasi kelopak',
     en: 'Play floating petals',
+  },
+  ambientPauseShort: {
+    id: 'Jeda',
+    en: 'Pause',
+  },
+  ambientPlayShort: {
+    id: 'Putar',
+    en: 'Play',
   },
   hero: {
     eyebrow: {
@@ -201,9 +209,17 @@ export const UI_STRINGS = {
       id: 'Salin perintah',
       en: 'Copy command',
     },
+    copyShort: {
+      id: 'Salin',
+      en: 'Copy',
+    },
     copied: {
       id: 'Tersalin!',
       en: 'Copied!',
+    },
+    copyFailed: {
+      id: 'Gagal menyalin',
+      en: 'Copy failed',
     },
     viewPypi: {
       id: 'PyPI',
@@ -269,6 +285,10 @@ export const UI_STRINGS = {
       id: 'Email Tersalin',
       en: 'Email Copied',
     },
+    copyFailed: {
+      id: 'Gagal menyalin email',
+      en: 'Failed to copy email',
+    },
     composeEmail: {
       id: 'Kirim Email Langsung',
       en: 'Compose Email',
@@ -299,6 +319,8 @@ export const UI_STRINGS = {
   switchLanguageLabel: LocalizedString
   ambientPause: LocalizedString
   ambientPlay: LocalizedString
+  ambientPauseShort: LocalizedString
+  ambientPlayShort: LocalizedString
   hero: Record<string, LocalizedString>
   projects: {
     sectionKicker: LocalizedString

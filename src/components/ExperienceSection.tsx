@@ -87,13 +87,13 @@ export function ExperienceSection() {
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div className="min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className="rounded-md border border-gold-brass/40 bg-subtle px-2.5 py-0.5 font-mono text-[11px] font-medium text-gold-brass">
+                        <span className="rounded-md border border-gold-brass/55 bg-surface px-2.5 py-0.5 font-mono text-[11px] font-medium text-gold-brass">
                           {entry.stampCode}
                         </span>
                         <span
                           className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${
                             isTeaching
-                              ? 'bg-gold-brass/15 text-gold-brass'
+                              ? 'border border-gold-brass/55 bg-surface text-gold-brass'
                               : 'bg-emerald-brooch/15 text-emerald-brooch'
                           }`}
                         >

@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { BookOpen, Check, Copy, ExternalLink, Package, Sparkles } from 'lucide-react'
+import { AlertCircle, BookOpen, Check, Copy, ExternalLink, Package, Sparkles } from 'lucide-react'
 import { useLanguage } from '../context/useLanguage'
 import { resolveAssetUrl } from '../lib/assetUrl'
+import { copyToClipboard } from '../lib/copyText'
 import {
   CREATOR_CHANNEL,
   OPEN_SOURCE_HIGHLIGHTS,
@@ -11,20 +12,31 @@ import {
 import { UI_STRINGS } from '../data/i18n'
 import { GithubIcon, YoutubeIcon } from './BrandIcons'
 
+type CopyFeedback = { id: string; status: 'copied' | 'error'; command: string } | null
+
 export function OpenSourceSection() {
   const { t } = useLanguage()
-  const [copiedId, setCopiedId] = useState<string | null>(null)
+  const [feedback, setFeedback] = useState<CopyFeedback>(null)
+  const timerRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current !== null) {
+        window.clearTimeout(timerRef.current)
+      }
+    }
+  }, [])
 
   const handleCopy = async (id: string, command: string) => {
-    try {
-      await navigator.clipboard?.writeText(command)
-    } catch {
-      // Fallback: still show feedback in non-clipboard environments
+    const ok = await copyToClipboard(command)
+    if (timerRef.current !== null) {
+      window.clearTimeout(timerRef.current)
     }
-    setCopiedId(id)
-    window.setTimeout(() => {
-      setCopiedId((current) => (current === id ? null : current))
-    }, 2000)
+    setFeedback({ id, status: ok ? 'copied' : 'error', command })
+    timerRef.current = window.setTimeout(() => {
+      setFeedback((current) => (current?.id === id ? null : current))
+      timerRef.current = null
+    }, 2200)
   }
 
   return (
@@ -42,10 +54,20 @@ export function OpenSourceSection() {
           </p>
         </div>
 
+        {/* Screen-reader live region for clipboard copy status */}
+        <p role="status" aria-live="polite" className="sr-only">
+          {feedback
+            ? feedback.status === 'copied'
+              ? `${t(UI_STRINGS.opensource.copied)} ${feedback.command}`
+              : `${t(UI_STRINGS.opensource.copyFailed)} ${feedback.command}`
+            : ''}
+        </p>
+
         {/* PyPI Packages Row */}
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {OPEN_SOURCE_PACKAGES.map((pkg, idx) => {
-            const isCopied = copiedId === pkg.id
+            const isCopied = feedback?.id === pkg.id && feedback.status === 'copied'
+            const isError = feedback?.id === pkg.id && feedback.status === 'error'
             return (
               <motion.article
                 key={pkg.id}
@@ -95,10 +117,15 @@ export function OpenSourceSection() {
                             {t(UI_STRINGS.opensource.copied)}
                           </span>
                         </>
+                      ) : isError ? (
+                        <>
+                          <AlertCircle className="h-3.5 w-3.5 text-gold-brass" aria-hidden="true" />
+                          <span className="text-ink">{t(UI_STRINGS.opensource.copyFailed)}</span>
+                        </>
                       ) : (
                         <>
                           <Copy className="h-3.5 w-3.5 text-gold-brass" aria-hidden="true" />
-                          <span>Copy</span>
+                          <span>{t(UI_STRINGS.opensource.copyShort)}</span>
                         </>
                       )}
                     </button>

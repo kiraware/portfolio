@@ -89,6 +89,47 @@ describe('ProjectsSection and ProjectModal', () => {
     expect(within(dialog).getByRole('img').getAttribute('src')).toContain(
       'screenshots/rekrutmen-home.png',
     )
+
+    // Carousel dot buttons meet accessible touch target size (>= 44x44px)
+    const slideDot = within(dialog).getByRole('button', { name: '1 / 2' })
+    expect(slideDot.className).toContain('min-h-11')
+    expect(slideDot.className).toContain('min-w-11')
+  })
+
+  it('places card trigger button inside h3 rather than wrapping heading elements inside button', () => {
+    renderProjects()
+
+    const cards = screen.getAllByTestId('project-card')
+    for (const card of cards) {
+      const heading = within(card).getByRole('heading', { level: 3 })
+      const button = within(heading).getByRole('button')
+      expect(heading.contains(button)).toBe(true)
+      expect(button.querySelector('h3')).toBeNull()
+    }
+  })
+
+  it('retains modal content until transitionend when closing with active exit animation', async () => {
+    const user = userEvent.setup()
+    renderProjects()
+
+    await user.click(
+      screen.getByRole('button', { name: /Portal E-Recruitment PT TASPEN/i }),
+    )
+    const dialog = screen.getByRole('dialog')
+    // Simulate active CSS exit transition on <dialog>
+    Object.defineProperty(dialog, 'getAnimations', {
+      configurable: true,
+      value: () => [{ playState: 'running' }],
+    })
+
+    await user.click(within(dialog).getByRole('button', { name: /Tutup detail proyek/i }))
+
+    // Content stays mounted during exit transition so dialog never flashes empty
+    expect(dialog.querySelector('h3')?.textContent).toMatch(/Portal E-Recruitment PT TASPEN/i)
+
+    // After transitionend, content unmounts cleanly
+    fireEvent.transitionEnd(dialog)
+    expect(dialog.querySelector('h3')).toBeNull()
   })
 
   it('supports Safari light-dismiss fallback when closedBy is absent on HTMLDialogElement.prototype', async () => {

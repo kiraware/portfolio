@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Menu, Moon, Sun, Languages } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
 import { useLanguage } from '../context/useLanguage'
@@ -11,6 +11,7 @@ export function Header() {
   const { renderedScheme, toggleTheme } = useTheme()
   const { locale, toggleLocale, t } = useLanguage()
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const handleCloseDrawer = useCallback(() => setDrawerOpen(false), [])
 
   const themeLabel =
     renderedScheme === 'dark' ? t(UI_STRINGS.switchToLight) : t(UI_STRINGS.switchToDark)
@@ -48,7 +49,7 @@ export function Header() {
                 href={item.href}
                 className="group inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-ink-muted transition-colors hover:bg-subtle hover:text-ink"
               >
-                <span className="font-mono text-[11px] text-gold-brass/80 transition-colors group-hover:text-emerald-brooch">
+                <span className="font-mono text-[11px] text-gold-brass transition-colors group-hover:text-emerald-brooch">
                   {item.stamp}
                 </span>
                 <span>{t(item.label)}</span>
@@ -103,7 +104,7 @@ export function Header() {
         </div>
       </header>
 
-      <MobileDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} navItems={NAV_ITEMS} />
+      <MobileDrawer isOpen={drawerOpen} onClose={handleCloseDrawer} navItems={NAV_ITEMS} />
     </>
   )
 }

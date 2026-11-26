@@ -61,7 +61,7 @@ function ProjectModalContent({ project, titleId, onRequestClose }: ModalContentP
   }
 
   return (
-    <div className="flex max-h-[90svh] flex-col">
+    <div className="flex min-h-0 flex-1 flex-col">
       {/* Header Bar */}
       <div className="flex items-start justify-between gap-4 border-b border-hairline bg-subtle/60 px-5 py-4 sm:px-7">
         <div className="min-w-0">
@@ -181,7 +181,7 @@ function ProjectModalContent({ project, titleId, onRequestClose }: ModalContentP
             <div className="flex flex-wrap items-center justify-between gap-3 border-t border-hairline bg-surface px-4 py-2.5 text-xs text-ink-muted">
               <p>{t(activeShot.caption)}</p>
               {hasMultipleShots ? (
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-0.5">
                   {shots.map((shot, idx) => (
                     <button
                       key={shot.src}
@@ -189,12 +189,17 @@ function ProjectModalContent({ project, titleId, onRequestClose }: ModalContentP
                       onClick={() => setSlideIndex(idx)}
                       aria-label={`${idx + 1} / ${shots.length}`}
                       aria-current={idx === slideIndex ? 'true' : undefined}
-                      className={`h-2.5 rounded-full transition-all cursor-pointer ${
-                        idx === slideIndex
-                          ? 'w-6 bg-emerald-brooch'
-                          : 'w-2.5 bg-hairline hover:bg-gold-brass'
-                      }`}
-                    />
+                      className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full transition-colors hover:bg-subtle cursor-pointer"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className={`h-2.5 rounded-full transition-all ${
+                          idx === slideIndex
+                            ? 'w-6 bg-emerald-brooch'
+                            : 'w-2.5 bg-hairline hover:bg-gold-brass'
+                        }`}
+                      />
+                    </button>
                   ))}
                 </div>
               ) : null}
@@ -277,7 +282,17 @@ function ProjectModalContent({ project, titleId, onRequestClose }: ModalContentP
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const onCloseRef = useRef(onClose)
   const titleId = useId()
+  const [renderedProject, setRenderedProject] = useState<ProjectItem | null>(project)
+
+  if (project && project !== renderedProject) {
+    setRenderedProject(project)
+  }
+
+  useEffect(() => {
+    onCloseRef.current = onClose
+  }, [onClose])
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -287,8 +302,19 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       if (!dialog.open && typeof dialog.showModal === 'function') {
         dialog.showModal()
       }
-    } else if (dialog.open && typeof dialog.close === 'function') {
+      return
+    }
+
+    if (dialog.open && typeof dialog.close === 'function') {
       dialog.close()
+    }
+
+    const hasRunningExit =
+      typeof dialog.getAnimations === 'function' &&
+      dialog.getAnimations().some((anim) => anim.playState === 'running')
+
+    if (!hasRunningExit) {
+      setRenderedProject(null)
     }
   }, [project])
 
@@ -297,7 +323,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     if (!dialog) return
 
     const handleClose = () => {
-      onClose()
+      onCloseRef.current()
+    }
+
+    const handleTransitionEnd = (event: TransitionEvent) => {
+      if (event.target === dialog && !dialog.open) {
+        setRenderedProject(null)
+      }
     }
 
     const handleClick = (event: MouseEvent) => {
@@ -315,19 +347,21 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     }
 
     dialog.addEventListener('close', handleClose)
+    dialog.addEventListener('transitionend', handleTransitionEnd)
     dialog.addEventListener('click', handleClick)
     return () => {
       dialog.removeEventListener('close', handleClose)
+      dialog.removeEventListener('transitionend', handleTransitionEnd)
       dialog.removeEventListener('click', handleClick)
     }
-  }, [onClose])
+  }, [])
 
   const requestClose = () => {
     const dialog = dialogRef.current
     if (dialog?.open && typeof dialog.close === 'function') {
       dialog.close()
     } else {
-      onClose()
+      onCloseRef.current()
     }
   }
 
@@ -338,10 +372,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       aria-labelledby={titleId}
       className="ve-modal-dialog"
     >
-      {project ? (
+      {renderedProject ? (
         <ProjectModalContent
-          key={project.id}
-          project={project}
+          key={renderedProject.id}
+          project={renderedProject}
           titleId={titleId}
           onRequestClose={requestClose}
         />

@@ -584,7 +584,7 @@ export const PROJECTS: ProjectItem[] = [
     },
     previewKind: 'editorial-card',
     editorialFallback: {
-      domainLabel: 'css.himakomunila.org · Annual Competition Portal',
+      domainLabel: 'HIMAKOM Unila · Annual Competition Portal (2024)',
       tagline: {
         id: 'Kompetisi Tahunan Himpunan Mahasiswa Ilmu Komputer Universitas Lampung',
         en: 'Annual Competition Portal of Computer Science Student Association (Unila)',
