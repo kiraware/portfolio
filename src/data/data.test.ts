@@ -125,7 +125,11 @@ describe('Portfolio bilingual CV and project data integrity', () => {
     expect(EXPERIENCES.some((e) => e.organization.id.includes('Kayla Multi Interior'))).toBe(true)
 
     const cssProject = PROJECTS.find((p) => p.id === 'css-himakom-unila')
+    const satujuaProject = PROJECTS.find((p) => p.id === 'satujua-studio')
+    const kaylaProject = PROJECTS.find((p) => p.id === 'kayla-multi-interior')
     expect(cssProject?.screenshots.length).toBeGreaterThanOrEqual(1)
+    expect(satujuaProject?.screenshots.length).toBeGreaterThanOrEqual(1)
+    expect(kaylaProject?.screenshots.length).toBeGreaterThanOrEqual(1)
   })
 
   it('exposes verified profile URLs and academic credentials', () => {

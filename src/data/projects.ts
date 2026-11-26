@@ -645,29 +645,21 @@ export const PROJECTS: ProjectItem[] = [
         en: 'Optimized portfolio imagery presentation and readability across mobile and desktop screens.',
       },
     ],
-    techStack: ['Next.js', 'React', 'JavaScript', 'CSS'],
-    previewKind: 'editorial-card',
-    editorialFallback: {
-      domainLabel: 'satujuastudio.com · Archived Snapshot',
-      tagline: {
-        id: 'Designing Dream · Building Stories',
-        en: 'Designing Dream · Building Stories',
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    previewKind: 'screenshots',
+    screenshots: [
+      {
+        src: 'screenshots/satujua-studio-home.png',
+        alt: {
+          id: 'Halaman utama website company profile Satu Jua Studio',
+          en: 'Homepage of Satu Jua Studio company profile website',
+        },
+        caption: {
+          id: 'Beranda Satu Jua Studio — hero arsitektur "Designing Dream · Building Stories" dan navigasi layanan studio',
+          en: 'Satu Jua Studio landing page — "Designing Dream · Building Stories" architecture hero and studio navigation',
+        },
       },
-      accentTitle: {
-        id: 'Satu Jua Studio',
-        en: 'Satu Jua Studio',
-      },
-      metrics: [
-        { id: 'Frontend Statis Next.js', en: 'Static Next.js Frontend' },
-        { id: 'Katalog Karya Arsitektur', en: 'Architecture Showcase' },
-        { id: 'Responsif Mobile & Desktop', en: 'Responsive Layout' },
-      ],
-      note: {
-        id: 'Domain asli offline dan berkas CSS/media Next.js tidak ikut tersimpan di Wayback Machine; tautan arsip HTML tetap tersedia.',
-        en: 'Original domain is offline and Wayback Machine did not archive the Next.js CSS/media bundles; HTML archive link remains available.',
-      },
-    },
-    screenshots: [],
+    ],
     links: [
       {
         label: { id: 'Arsip Wayback Machine', en: 'Wayback Archive' },
@@ -702,37 +694,40 @@ export const PROJECTS: ProjectItem[] = [
     },
     highlights: [
       {
-        id: 'Mengembangkan halaman profil layanan desain interior (Rumah, Kantor, Hotel) menggunakan Next.js.',
-        en: 'Built company showcase pages highlighting Residential, Office, and Hotel interior services with Next.js.',
+        id: 'Mengembangkan halaman profil layanan desain interior (Rumah, Kantor, Hotel) menggunakan Next.js, Tailwind CSS, dan Framer Motion.',
+        en: 'Built company showcase pages highlighting Residential, Office, and Hotel interior services with Next.js, Tailwind CSS, and Framer Motion.',
       },
       {
-        id: 'Menyusun navigasi layanan, galeri proyek, dan kanal kontak klien yang bersih serta responsif.',
-        en: 'Structured clean service navigation, project galleries, and client inquiry paths across viewports.',
+        id: 'Menyusun navigasi layanan, katalog material, galeri proyek interior, dan kanal konsultasi WhatsApp klien secara responsif.',
+        en: 'Structured service navigation, material catalogs, project showcases, and responsive WhatsApp inquiry flows.',
       },
     ],
-    techStack: ['Next.js', 'React', 'JavaScript', 'CSS'],
-    previewKind: 'editorial-card',
-    editorialFallback: {
-      domainLabel: 'kaylamultiinterior.com · Archived Snapshot',
-      tagline: {
-        id: 'Solusi Desain Interior · Rumah · Kantor · Hotel',
-        en: 'Interior Design Solutions · Home · Office · Hotel',
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    previewKind: 'screenshots',
+    screenshots: [
+      {
+        src: 'screenshots/kayla-multi-interior-home.png',
+        alt: {
+          id: 'Halaman utama website company profile Kayla Multi Interior',
+          en: 'Homepage of Kayla Multi Interior company profile website',
+        },
+        caption: {
+          id: 'Beranda Kayla Multi Interior — identitas merek, kategori Rumah/Kantor/Hotel, dan hero desain interior',
+          en: 'Kayla Multi Interior homepage — brand identity, Residential/Office/Hotel categories, and interior hero showcase',
+        },
       },
-      accentTitle: {
-        id: 'Kayla Multi Interior',
-        en: 'Kayla Multi Interior',
+      {
+        src: 'screenshots/kayla-multi-interior-projects.png',
+        alt: {
+          id: 'Halaman galeri proyek interior pada website Kayla Multi Interior',
+          en: 'Interior projects showcase page on Kayla Multi Interior website',
+        },
+        caption: {
+          id: 'Halaman Proyek — dokumentasi portofolio pengerjaan desain interior klien dan testimoni',
+          en: 'Projects gallery — completed client interior design case studies and testimonials',
+        },
       },
-      metrics: [
-        { id: 'Frontend Statis Next.js', en: 'Static Next.js Frontend' },
-        { id: 'Layanan Rumah, Kantor & Hotel', en: 'Residential, Office & Hotel' },
-        { id: 'Profil Perusahaan Responsif', en: 'Responsive Company Profile' },
-      ],
-      note: {
-        id: 'Domain asli offline dan berkas CSS/media Next.js tidak ikut tersimpan di Wayback Machine; tautan arsip HTML tetap tersedia.',
-        en: 'Original domain is offline and Wayback Machine did not archive the Next.js CSS/media bundles; HTML archive link remains available.',
-      },
-    },
-    screenshots: [],
+    ],
     links: [
       {
         label: { id: 'Arsip Wayback Machine', en: 'Wayback Archive' },

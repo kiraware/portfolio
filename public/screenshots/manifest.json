@@ -76,17 +76,21 @@
       "files": ["screenshots/css-himakom-home.png", "screenshots/css-himakom-cpc.png"],
       "source": "Cloned https://github.com/vexra/css into temp dir and rendered Next.js 14 app locally on 127.0.0.1:3190",
       "piiVerified": true
-    }
-  ],
-  "editorialFallbacks": [
+    },
     {
       "projectId": "satujua-studio",
-      "reason": "Wayback Machine snapshots (20240506-20250114) missed Next.js CSS/hero media on archive.org; repo not publicly listed under kiraware."
+      "files": ["screenshots/satujua-studio-home.png"],
+      "source": "Rendered local Next.js 13 app from C:\\Users\\User\\Downloads\\satujuastudio-main in isolated temp dir on 127.0.0.1:3192",
+      "piiVerified": true
     },
     {
       "projectId": "kayla-multi-interior",
-      "reason": "Wayback Machine snapshots (20250313) missed Next.js CSS/hero media on archive.org; repo not publicly listed under kiraware."
-    },
+      "files": ["screenshots/kayla-multi-interior-home.png", "screenshots/kayla-multi-interior-projects.png"],
+      "source": "Rendered local Next.js 14 app from C:\\Users\\User\\Downloads\\kayla-interior-main in isolated temp dir on 127.0.0.1:3191",
+      "piiVerified": true
+    }
+  ],
+  "editorialFallbacks": [
     {
       "projectId": "siakadu-bot",
       "reason": "Telegram chatbot; rendered via custom authentic Telegram chat preview component (SiakaduPreview.tsx) grounded in real D:\\Project\\siakadu-bot/project/faq.json entries."

@@ -48,9 +48,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1795658552.188512,
-    "seen": 1795658720.5969458,
-    "ast_hash": "10495bfcc6c568eca4dab6dd5df795d3",
+    "mtime": 1795674358.8627634,
+    "seen": 1795675316.3790543,
+    "ast_hash": "f6c5eaae41a33b242852a4a9843a74bc",
     "semantic_hash": ""
   },
   "index.html": {
@@ -138,9 +138,9 @@
     "semantic_hash": ""
   },
   "public/screenshots/manifest.json": {
-    "mtime": 1795667712.034233,
-    "seen": 1795667810.4047163,
-    "ast_hash": "ad56cbea90d9eff7fa8767f4b89d11d9",
+    "mtime": 1795674842.228352,
+    "seen": 1795675316.3790543,
+    "ast_hash": "9bc27a764e670cc6843ab6cef3e52ec8",
     "semantic_hash": ""
   },
   "public/art/contact-envelope.jpg": {
@@ -222,9 +222,9 @@
     "semantic_hash": ""
   },
   "src/data/data.test.ts": {
-    "mtime": 1795667710.6400714,
-    "seen": 1795667810.4047163,
-    "ast_hash": "35e51b62a7b2505742e31d619c893d98",
+    "mtime": 1795674845.0432837,
+    "seen": 1795675316.3790543,
+    "ast_hash": "87ba06d09e33bba4d40bba658bac12be",
     "semantic_hash": ""
   },
   "src/data/experience.ts": {
@@ -252,9 +252,9 @@
     "semantic_hash": ""
   },
   "src/data/projects.ts": {
-    "mtime": 1795667709.0568473,
-    "seen": 1795667810.4047163,
-    "ast_hash": "111e349783e965333eecb301f985e6c6",
+    "mtime": 1795674837.7851436,
+    "seen": 1795675316.3790543,
+    "ast_hash": "2773de3dc9ffc2f7ec4cd47bee55bf7a",
     "semantic_hash": ""
   },
   "src/data/types.ts": {
@@ -417,6 +417,24 @@
     "mtime": 1795667619.694559,
     "seen": 1795667810.4047163,
     "ast_hash": "da43735c5db9cd21bee905f8b72e9942",
+    "semantic_hash": ""
+  },
+  "public/screenshots/kayla-multi-interior-home.png": {
+    "mtime": 1795674747.2705686,
+    "seen": 1795675316.3790543,
+    "ast_hash": "e2829bc5d5ac480684bc52a295f136bf",
+    "semantic_hash": ""
+  },
+  "public/screenshots/kayla-multi-interior-projects.png": {
+    "mtime": 1795674753.495826,
+    "seen": 1795675316.3790543,
+    "ast_hash": "d716b19c1f37f70dea0314c196ac19b8",
+    "semantic_hash": ""
+  },
+  "public/screenshots/satujua-studio-home.png": {
+    "mtime": 1795674717.0107028,
+    "seen": 1795675316.3790543,
+    "ast_hash": "33bbff0452dcad24e5ea84cdf085e473",
     "semantic_hash": ""
   },
   "pnpm-lock.yaml": {
