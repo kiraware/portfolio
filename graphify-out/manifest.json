@@ -1,0 +1,104 @@
+{
+  ".oxlintrc.json": {
+    "mtime": 1795658827.7717817,
+    "seen": 1795659003.6341352,
+    "ast_hash": "0ea5480a5287ac8fa3402a50aec5f7cc",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1795658778.358016,
+    "seen": 1795658805.9955552,
+    "ast_hash": "a3ebaa0cd17953638c37a0b02f60c8bd",
+    "semantic_hash": ""
+  },
+  "src/App.tsx": {
+    "mtime": 1795658552.2557175,
+    "seen": 1795658720.5969458,
+    "ast_hash": "e4931f6d58500c8315d8198f9aa64ff0",
+    "semantic_hash": ""
+  },
+  "src/main.tsx": {
+    "mtime": 1795658552.2657168,
+    "seen": 1795658720.5969458,
+    "ast_hash": "787e5a07efeb2bf6209d5937195f2f68",
+    "semantic_hash": ""
+  },
+  "tsconfig.app.json": {
+    "mtime": 1795658552.1439905,
+    "seen": 1795658720.5969458,
+    "ast_hash": "5f2dafd737dea8a4ddcbb10f5113ac5a",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1795658552.15699,
+    "seen": 1795658720.5969458,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": ""
+  },
+  "tsconfig.node.json": {
+    "mtime": 1795658552.1609886,
+    "seen": 1795658720.5969458,
+    "ast_hash": "f9cb81ddcea69ffdab672fc8c48dca66",
+    "semantic_hash": ""
+  },
+  "vite.config.ts": {
+    "mtime": 1795658619.1737642,
+    "seen": 1795658720.5969458,
+    "ast_hash": "689614fb7caf0100baeb3b3021dc4c36",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1795658552.188512,
+    "seen": 1795658720.5969458,
+    "ast_hash": "10495bfcc6c568eca4dab6dd5df795d3",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1795658553.0084884,
+    "seen": 1795658720.5969458,
+    "ast_hash": "d8deeba8079b5f4919dcc39c5ec10d43",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1795658552.2117088,
+    "seen": 1795658720.5969458,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "public/icons.svg": {
+    "mtime": 1795658552.216706,
+    "seen": 1795658720.5969458,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "src/assets/hero.png": {
+    "mtime": 1795658552.2027078,
+    "seen": 1795658720.5969458,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "src/assets/react.svg": {
+    "mtime": 1795658552.2277083,
+    "seen": 1795658720.5969458,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "src/assets/vite.svg": {
+    "mtime": 1795658552.2387078,
+    "seen": 1795658720.5969458,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "scripts/install-hooks.ps1": {
+    "mtime": 1795658771.5883574,
+    "seen": 1795658805.9955552,
+    "ast_hash": "15ac2346fad46d61ed695f9463d9e512",
+    "semantic_hash": ""
+  },
+  "pnpm-lock.yaml": {
+    "mtime": 1795658572.9083614,
+    "seen": 1795658720.5969458,
+    "ast_hash": "9c5ad0157a9d05589f16afb788a60601",
+    "semantic_hash": ""
+  }
+}

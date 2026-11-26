@@ -1,0 +1,8 @@
+# Ignore agent skill libraries, build outputs, hooks scripts, and lockfiles from the portfolio knowledge graph
+.agents/
+.github/
+scripts/git-hooks/
+dist/
+node_modules/
+pnpm-lock.yaml
+skills-lock.json
