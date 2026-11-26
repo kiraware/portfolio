@@ -1,10 +1,36 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>temp-vite</title>
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      try {
+        var s = localStorage.getItem('color-scheme');
+        if (s === 'light' || s === 'dark') {
+          document.querySelector('meta[name="color-scheme"]').content = s;
+        }
+      } catch (e) {}
+    </script>
+    <title>Cakrawangsa Praba Alkautsar — Full-Stack &amp; Backend Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Cakrawangsa Praba Alkautsar (kiraware) — Full-Stack &amp; Backend Developer building production web applications with Laravel, Next.js, Python, and PostgreSQL."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cakrawangsa Praba Alkautsar — Full-Stack &amp; Backend Developer" />
+    <meta
+      property="og:description"
+      content="Production web applications, backend systems, and open-source Python libraries by Cakrawangsa Praba Alkautsar."
+    />
+    <meta property="og:url" content="https://kiraware.github.io/portfolio/" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>

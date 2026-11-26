@@ -29,3 +29,7 @@ graphify-out/.needs_update
 graphify-out/.pending_*
 graphify-out/.rebuild.lock
 graphify-out/cache/
+
+# Superpowers SDD execution workspace (local scratch ledger)
+.superpowers/
+**/__pycache__/
