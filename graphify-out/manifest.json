@@ -161,6 +161,96 @@
     "ast_hash": "44afc689d4299c6b70cce1a13cfdbca9",
     "semantic_hash": ""
   },
+  "public/screenshots/manifest.json": {
+    "mtime": 1795664146.9441144,
+    "seen": 1795664205.6592333,
+    "ast_hash": "872ab1268e636510e3032e490b3c642b",
+    "semantic_hash": ""
+  },
+  "public/art/contact-envelope.jpg": {
+    "mtime": 1795662783.448696,
+    "seen": 1795664205.6592333,
+    "ast_hash": "97f821a5d4c7aa401be04f7365b8d9b1",
+    "semantic_hash": ""
+  },
+  "public/art/hero-leiden-desk.jpg": {
+    "mtime": 1795662770.5451138,
+    "seen": 1795664205.6592333,
+    "ast_hash": "40d0fc03b4c909ec0a1ca48db8823e00",
+    "semantic_hash": ""
+  },
+  "public/screenshots/drive-pesawaran-folders.png": {
+    "mtime": 1795663970.973834,
+    "seen": 1795664205.6592333,
+    "ast_hash": "8c478ea0f67aa3284482f61bbb9b1aef",
+    "semantic_hash": ""
+  },
+  "public/screenshots/drive-pesawaran-login.png": {
+    "mtime": 1795662815.148847,
+    "seen": 1795664205.6592333,
+    "ast_hash": "7e0feb41e54a0cc51310e3b170a6cd7f",
+    "semantic_hash": ""
+  },
+  "public/screenshots/evoting-pringsewu.png": {
+    "mtime": 1795664132.3252313,
+    "seen": 1795664205.6592333,
+    "ast_hash": "2d4d789054a76fde6ecdeac9cb65f5ff",
+    "semantic_hash": ""
+  },
+  "public/screenshots/helpdesk-unila-dashboard.png": {
+    "mtime": 1795663490.0214255,
+    "seen": 1795664205.6592333,
+    "ast_hash": "a45be1b73e0e9e5b81eaa3bdf2cb0a0f",
+    "semantic_hash": ""
+  },
+  "public/screenshots/helpdesk-unila-portal.png": {
+    "mtime": 1795663483.6544044,
+    "seen": 1795664205.6592333,
+    "ast_hash": "5bdcd4cd2968e248332e5ce38ddeed99",
+    "semantic_hash": ""
+  },
+  "public/screenshots/pakta-integritas-monitoring.png": {
+    "mtime": 1795663497.9806883,
+    "seen": 1795664205.6592333,
+    "ast_hash": "f245e001b63d105d79150e9ceae10081",
+    "semantic_hash": ""
+  },
+  "public/screenshots/paspybin-docs.png": {
+    "mtime": 1795662806.2112722,
+    "seen": 1795664205.6592333,
+    "ast_hash": "a1fa58f6088b995a657b16f7ff18a1fd",
+    "semantic_hash": ""
+  },
+  "public/screenshots/pybmkg-docs.png": {
+    "mtime": 1795662799.839058,
+    "seen": 1795664205.6592333,
+    "ast_hash": "60b94f2486de853148e0e5d0fb3ba928",
+    "semantic_hash": ""
+  },
+  "public/screenshots/pycodecov-docs.png": {
+    "mtime": 1795662811.0829122,
+    "seen": 1795664205.6592333,
+    "ast_hash": "f7ef1f30ff8f676142a25e7cbfb5a018",
+    "semantic_hash": ""
+  },
+  "public/screenshots/rekrutmen-home.png": {
+    "mtime": 1795662916.6356351,
+    "seen": 1795664205.6592333,
+    "ast_hash": "0bcf8ff4ac02e15b1125ba4a8e3c205b",
+    "semantic_hash": ""
+  },
+  "public/screenshots/rekrutmen-vacancies.png": {
+    "mtime": 1795663003.3218012,
+    "seen": 1795664205.6592333,
+    "ast_hash": "877564ff57a03993f734c6ead226190d",
+    "semantic_hash": ""
+  },
+  "public/screenshots/smpn13-bandarlampung.png": {
+    "mtime": 1795662835.224273,
+    "seen": 1795664205.6592333,
+    "ast_hash": "2205e78bd2c981ae7790126f42b85a0b",
+    "semantic_hash": ""
+  },
   "pnpm-lock.yaml": {
     "mtime": 1795662538.713452,
     "seen": 1795662744.0778012,

@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-11-26",
+  "viewport": "1280x800",
+  "artwork": [
+    {
+      "file": "art/hero-leiden-desk.jpg",
+      "usage": "Hero editorial desk illustration (Violet Evergarden aesthetic)",
+      "aspectRatio": "4:3"
+    },
+    {
+      "file": "art/contact-envelope.jpg",
+      "usage": "Contact Dispatch sealed envelope illustration",
+      "aspectRatio": "16:9"
+    }
+  ],
+  "screenshots": [
+    {
+      "projectId": "rekrutmen-taspen",
+      "files": ["screenshots/rekrutmen-home.png", "screenshots/rekrutmen-vacancies.png"],
+      "source": "Local Next.js 16 + PostgreSQL 16 (D:\\Project\\rekrutmen) with synthetic vacancies; test placeholders hidden during capture",
+      "piiVerified": true
+    },
+    {
+      "projectId": "pakta-integritas-taspen",
+      "files": ["screenshots/pakta-integritas-monitoring.png"],
+      "source": "Compiled React/Inertia bundle (D:\\Project\\pakta-integritas/public/build) rendered with synthetic PT TASPEN demo telemetry props (Docker Desktop service unavailable non-elevated)",
+      "piiVerified": true
+    },
+    {
+      "projectId": "helpdesk-upa-tik-unila",
+      "files": ["screenshots/helpdesk-unila-portal.png", "screenshots/helpdesk-unila-dashboard.png"],
+      "source": "Local Laravel 12 (D:\\Project\\helpdesk-upa-tik-unila) against isolated SQLite DB seeded with 8 synthetic Unila IT tickets",
+      "piiVerified": true
+    },
+    {
+      "projectId": "drive-pesawaran",
+      "files": ["screenshots/drive-pesawaran-folders.png", "screenshots/drive-pesawaran-login.png"],
+      "source": "Inside file manager captured from isolated temporary worktree + SQLite synthetic Pemkab Pesawaran demo seed; login captured from live https://drive.pesawarankab.go.id/",
+      "piiVerified": true
+    },
+    {
+      "projectId": "evoting-pringsewu",
+      "files": ["screenshots/evoting-pringsewu.png"],
+      "source": "Temporary git worktree (origin/testing) of D:\\Project\\e-voting against isolated SQLite DB seeded with fictional Pilkada Pringsewu 2024 Paslon Demo 01-03",
+      "piiVerified": true
+    },
+    {
+      "projectId": "smpn13-bandarlampung",
+      "files": ["screenshots/smpn13-bandarlampung.png"],
+      "source": "Wayback Machine snapshot 20251104234357 of https://smpn13-bdl.sch.id/ with archive toolbar hidden",
+      "piiVerified": true
+    },
+    {
+      "projectId": "python-pypi-libraries",
+      "files": ["screenshots/pybmkg-docs.png", "screenshots/paspybin-docs.png", "screenshots/pycodecov-docs.png"],
+      "source": "Live Read the Docs documentation sites (pybmkg.rtfd.io, paspybin.rtfd.io, pycodecov.rtfd.io)",
+      "piiVerified": true
+    }
+  ],
+  "editorialFallbacks": [
+    {
+      "projectId": "satujua-studio",
+      "reason": "Wayback Machine snapshots (20240506-20250114) missed Next.js CSS/hero media on archive.org; rendered as bespoke browser-framed editorial showcase card citing verified archive copy and Wayback link."
+    },
+    {
+      "projectId": "kayla-multi-interior",
+      "reason": "Wayback Machine snapshots (20250313) missed Next.js CSS/hero media on archive.org; rendered as bespoke browser-framed editorial showcase card citing verified archive copy and Wayback link."
+    },
+    {
+      "projectId": "css-himakom-unila",
+      "reason": "No local repository or live archive available; rendered as bespoke browser-framed editorial showcase card (unrelated files in D:\\Project\\dont remove ss excluded)."
+    },
+    {
+      "projectId": "siakadu-bot",
+      "reason": "Telegram chatbot; rendered via custom authentic Telegram chat preview component (SiakaduPreview.tsx) grounded in real D:\\Project\\siakadu-bot/project/faq.json entries."
+    }
+  ]
+}
