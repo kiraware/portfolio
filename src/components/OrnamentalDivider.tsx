@@ -1,0 +1,82 @@
+interface OrnamentalDividerProps {
+  label?: string
+  className?: string
+}
+
+export function OrnamentalDivider({ label, className = '' }: OrnamentalDividerProps) {
+  return (
+    <div
+      className={`flex items-center justify-center gap-4 my-10 select-none ${className}`}
+      aria-hidden="true"
+    >
+      <span className="h-px flex-1 bg-gradient-to-r from-transparent via-hairline to-gold-brass/50" />
+      <span className="inline-flex items-center gap-2.5 text-gold-brass">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="shrink-0">
+          <path
+            d="M12 2L17.5 12L12 22L6.5 12L12 2Z"
+            fill="var(--accent-emerald)"
+            fillOpacity="0.22"
+            stroke="var(--accent-emerald)"
+            strokeWidth="1.4"
+          />
+          <path
+            d="M12 6.5L14.8 12L12 17.5L9.2 12L12 6.5Z"
+            fill="var(--accent-emerald)"
+          />
+          <circle cx="12" cy="12" r="1.4" fill="var(--bg-surface)" />
+        </svg>
+        {label ? (
+          <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-ink-muted">
+            {label}
+          </span>
+        ) : null}
+      </span>
+      <span className="h-px flex-1 bg-gradient-to-l from-transparent via-hairline to-gold-brass/50" />
+    </div>
+  )
+}
+
+interface WaxSealMonogramProps {
+  monogram?: string
+  size?: 'sm' | 'md'
+}
+
+export function WaxSealMonogram({ monogram = 'CA', size = 'sm' }: WaxSealMonogramProps) {
+  const dim = size === 'md' ? 48 : 38
+  return (
+    <span
+      className="relative inline-flex items-center justify-center shrink-0"
+      style={{ width: dim, height: dim }}
+    >
+      <svg
+        width={dim}
+        height={dim}
+        viewBox="0 0 48 48"
+        fill="none"
+        aria-hidden="true"
+        className="absolute inset-0"
+      >
+        <circle
+          cx="24"
+          cy="24"
+          r="21"
+          fill="var(--accent-prussian)"
+          fillOpacity="0.12"
+          stroke="var(--accent-gold)"
+          strokeWidth="1.5"
+        />
+        <circle
+          cx="24"
+          cy="24"
+          r="17"
+          stroke="var(--accent-emerald)"
+          strokeWidth="1"
+          strokeDasharray="2 2.5"
+        />
+      </svg>
+      <span className="relative font-display font-semibold tracking-[0.06em] text-prussian text-base leading-none">
+        {monogram}
+      </span>
+    </span>
+  )
+}
