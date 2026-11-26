@@ -577,34 +577,39 @@ export const PROJECTS: ProjectItem[] = [
         en: 'Delivered responsive announcement and winner publication views across desktop and mobile devices.',
       },
     ],
-    techStack: ['Full-Stack Web', 'Laravel / PHP', 'Tailwind CSS', 'MySQL'],
-    statusBadge: {
-      id: 'Proyek Organisasi Kampus · HIMAKOM Unila',
-      en: 'Campus Organization Platform · HIMAKOM Unila',
-    },
-    previewKind: 'editorial-card',
-    editorialFallback: {
-      domainLabel: 'HIMAKOM Unila · Annual Competition Portal (2024)',
-      tagline: {
-        id: 'Kompetisi Tahunan Himpunan Mahasiswa Ilmu Komputer Universitas Lampung',
-        en: 'Annual Competition Portal of Computer Science Student Association (Unila)',
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
+    previewKind: 'screenshots',
+    screenshots: [
+      {
+        src: 'screenshots/css-himakom-home.png',
+        alt: {
+          id: 'Halaman utama website Computer Science Showdown 2024 HIMAKOM Unila',
+          en: 'Homepage of Computer Science Showdown 2024 HIMAKOM Unila',
+        },
+        caption: {
+          id: 'Landing Page Computer Science Showdown 2024 — identitas acara, navigasi cabang lomba, dan portal peserta',
+          en: 'Computer Science Showdown 2024 landing page — event branding, competition navigation, and participant portal',
+        },
       },
-      accentTitle: {
-        id: 'Computer Science Showdown',
-        en: 'Computer Science Showdown',
+      {
+        src: 'screenshots/css-himakom-cpc.png',
+        alt: {
+          id: 'Halaman detail lomba National Competitive Programming Competition di website CSS HIMAKOM Unila',
+          en: 'National Competitive Programming Competition detail page on CSS HIMAKOM Unila website',
+        },
+        caption: {
+          id: 'Halaman Cabang Lomba CPC — deskripsi kompetisi, ketentuan umum, dan informasi pendaftaran peserta',
+          en: 'Competitive Programming Competition track — event description, rules, and registration info',
+        },
       },
-      metrics: [
-        { id: 'Pendaftaran Peserta Daring', en: 'Online Registration Flow' },
-        { id: 'Kategori & Buku Panduan Lomba', en: 'Competition Tracks & Rules' },
-        { id: 'Publikasi Pemenang & Pengumuman', en: 'Winner & Announcement Board' },
-      ],
-      note: {
-        id: 'Domain acara musiman tidak lagi aktif setelah penyelenggaraan 2024.',
-        en: 'Seasonal event domain retired following the 2024 competition cycle.',
+    ],
+    links: [
+      {
+        label: { id: 'Repositori GitHub', en: 'GitHub Repository' },
+        href: 'https://github.com/vexra/css',
+        kind: 'github',
       },
-    },
-    screenshots: [],
-    links: [],
+    ],
   },
   {
     id: 'satujua-studio',

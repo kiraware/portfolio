@@ -3,8 +3,8 @@
   "viewport": "1280x800",
   "artwork": [
     {
-      "file": "art/hero-violet-scene.jpg",
-      "usage": "Hero showcase illustration",
+      "file": "art/hero-leiden-desk.jpg",
+      "usage": "Hero showcase illustration (scenic desk, brass typewriter, emerald brooch, violet blossoms)",
       "aspectRatio": "4:3"
     },
     {
@@ -70,20 +70,22 @@
       "files": ["screenshots/pybmkg-docs.png", "screenshots/paspybin-docs.png", "screenshots/pycodecov-docs.png"],
       "source": "Live Read the Docs documentation sites (pybmkg.rtfd.io, paspybin.rtfd.io, pycodecov.rtfd.io)",
       "piiVerified": true
+    },
+    {
+      "projectId": "css-himakom-unila",
+      "files": ["screenshots/css-himakom-home.png", "screenshots/css-himakom-cpc.png"],
+      "source": "Cloned https://github.com/vexra/css into temp dir and rendered Next.js 14 app locally on 127.0.0.1:3190",
+      "piiVerified": true
     }
   ],
   "editorialFallbacks": [
     {
       "projectId": "satujua-studio",
-      "reason": "Wayback Machine snapshots (20240506-20250114) missed Next.js CSS/hero media on archive.org; rendered as bespoke browser-framed editorial showcase card citing verified archive copy and Wayback link."
+      "reason": "Wayback Machine snapshots (20240506-20250114) missed Next.js CSS/hero media on archive.org; repo not publicly listed under kiraware."
     },
     {
       "projectId": "kayla-multi-interior",
-      "reason": "Wayback Machine snapshots (20250313) missed Next.js CSS/hero media on archive.org; rendered as bespoke browser-framed editorial showcase card citing verified archive copy and Wayback link."
-    },
-    {
-      "projectId": "css-himakom-unila",
-      "reason": "No local repository or live archive available; rendered as bespoke browser-framed editorial showcase card (unrelated files in D:\\Project\\dont remove ss excluded)."
+      "reason": "Wayback Machine snapshots (20250313) missed Next.js CSS/hero media on archive.org; repo not publicly listed under kiraware."
     },
     {
       "projectId": "siakadu-bot",

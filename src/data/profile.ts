@@ -6,7 +6,7 @@ export const PROFILE = {
   monogram: 'CA',
   handle: 'kiraware',
   email: 'cakrawangsaprabaalkautsar7@gmail.com',
-  heroArtwork: 'art/hero-violet-scene.jpg',
+  heroArtwork: 'art/hero-leiden-desk.jpg',
   bgDayArtwork: 'art/bg-leiden-day.jpg',
   bgNightArtwork: 'art/bg-leiden-night.jpg',
   lakeBannerArtwork: 'art/banner-lake-reflections.jpg',

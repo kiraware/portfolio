@@ -1,7 +1,7 @@
 # Graph Report - portfolio  (2026-11-26)
 
 ## Corpus Check
-- 49 files · ~27,742 words
+- 49 files · ~27,745 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: (none) 4, .css 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c4c91419`
+- Built from commit: `f0bac6d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -47,14 +47,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `Task 3: Authoritative Bilingual CV, Project, Experience & Open-Source Data Modules` --references--> `LocalizedString`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
-- `Review Focus` --references--> `useLanguage()`  [INFERRED]
-  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
-- `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`` --references--> `useLanguage()`  [INFERRED]
-  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
-- `Task 4: Header, Mobile Navigation Drawer, Ambient Petals & Hero ("Auto Memories Dispatch")` --references--> `useLanguage()`  [INFERRED]
-  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
-- `Task 5: Screenshot-First Projects Showcase & Native `<dialog>` Case Study Lightbox` --references--> `useLanguage()`  [INFERRED]
-  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
+- `File Structure` --references--> `LanguageProvider()`  [INFERRED]
+  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/LanguageContext.tsx
+- `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`` --references--> `LanguageProvider()`  [INFERRED]
+  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/LanguageContext.tsx
+- `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`` --references--> `resolveAssetUrl()`  [INFERRED]
+  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/lib/assetUrl.ts
+- `Task 4: Header, Mobile Navigation Drawer, Ambient Petals & Hero ("Auto Memories Dispatch")` --references--> `resolveAssetUrl()`  [INFERRED]
+  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/lib/assetUrl.ts
 
 ## Import Cycles
 - None detected.

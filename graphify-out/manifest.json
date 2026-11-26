@@ -138,9 +138,9 @@
     "semantic_hash": ""
   },
   "public/screenshots/manifest.json": {
-    "mtime": 1795666908.314108,
-    "seen": 1795667125.1583962,
-    "ast_hash": "48b3af4de252554b4d50b739d2355670",
+    "mtime": 1795667712.034233,
+    "seen": 1795667810.4047163,
+    "ast_hash": "ad56cbea90d9eff7fa8767f4b89d11d9",
     "semantic_hash": ""
   },
   "public/art/contact-envelope.jpg": {
@@ -222,9 +222,9 @@
     "semantic_hash": ""
   },
   "src/data/data.test.ts": {
-    "mtime": 1795666905.0617363,
-    "seen": 1795667125.1583962,
-    "ast_hash": "26a8af073ed01b38a3488d5860ca1368",
+    "mtime": 1795667710.6400714,
+    "seen": 1795667810.4047163,
+    "ast_hash": "35e51b62a7b2505742e31d619c893d98",
     "semantic_hash": ""
   },
   "src/data/experience.ts": {
@@ -246,15 +246,15 @@
     "semantic_hash": ""
   },
   "src/data/profile.ts": {
-    "mtime": 1795666815.441594,
-    "seen": 1795667125.1583962,
-    "ast_hash": "e1890b133a23ffec7985277a9b0d5759",
+    "mtime": 1795667417.6837833,
+    "seen": 1795667810.4047163,
+    "ast_hash": "a62294f9b351fa01ffa0d5546272a00c",
     "semantic_hash": ""
   },
   "src/data/projects.ts": {
-    "mtime": 1795665587.6234858,
-    "seen": 1795665804.2526503,
-    "ast_hash": "5bb571f187f9b9c67aa94558c7d99868",
+    "mtime": 1795667709.0568473,
+    "seen": 1795667810.4047163,
+    "ast_hash": "111e349783e965333eecb301f985e6c6",
     "semantic_hash": ""
   },
   "src/data/types.ts": {
@@ -282,9 +282,9 @@
     "semantic_hash": ""
   },
   "src/components/HeaderAndHero.test.tsx": {
-    "mtime": 1795666906.4346993,
-    "seen": 1795667125.1583962,
-    "ast_hash": "bcc96d72ad17a066d3814da32e946274",
+    "mtime": 1795667418.7961552,
+    "seen": 1795667810.4047163,
+    "ast_hash": "8fd33260cc49f94a25c4e7d093a48628",
     "semantic_hash": ""
   },
   "src/components/Hero.tsx": {
@@ -401,10 +401,22 @@
     "ast_hash": "c3d21c5d807931fa5db07b32d93b8aec",
     "semantic_hash": ""
   },
-  "public/art/hero-violet-scene.jpg": {
-    "mtime": 1795666705.7767744,
-    "seen": 1795667125.1583962,
-    "ast_hash": "f18ce5c1367e5fd29031614b991c3c2f",
+  "public/art/hero-leiden-desk.jpg": {
+    "mtime": 1795662770.5451138,
+    "seen": 1795667810.4047163,
+    "ast_hash": "40d0fc03b4c909ec0a1ca48db8823e00",
+    "semantic_hash": ""
+  },
+  "public/screenshots/css-himakom-cpc.png": {
+    "mtime": 1795667623.4183326,
+    "seen": 1795667810.4047163,
+    "ast_hash": "05170a62089077c7547f2da57dab820b",
+    "semantic_hash": ""
+  },
+  "public/screenshots/css-himakom-home.png": {
+    "mtime": 1795667619.694559,
+    "seen": 1795667810.4047163,
+    "ast_hash": "da43735c5db9cd21bee905f8b72e9942",
     "semantic_hash": ""
   },
   "pnpm-lock.yaml": {
