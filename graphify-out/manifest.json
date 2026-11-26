@@ -251,6 +251,48 @@
     "ast_hash": "2205e78bd2c981ae7790126f42b85a0b",
     "semantic_hash": ""
   },
+  "src/data/data.test.ts": {
+    "mtime": 1795664422.9362476,
+    "seen": 1795664452.195094,
+    "ast_hash": "a187af2d5c84c6953f76006f7bff2f10",
+    "semantic_hash": ""
+  },
+  "src/data/experience.ts": {
+    "mtime": 1795664379.8148975,
+    "seen": 1795664452.195094,
+    "ast_hash": "3dacf78e063f4f9b41afb22f5d665576",
+    "semantic_hash": ""
+  },
+  "src/data/i18n.ts": {
+    "mtime": 1795664375.8125618,
+    "seen": 1795664452.195094,
+    "ast_hash": "f49d1f3e9032918ebb925bd34bd1ea31",
+    "semantic_hash": ""
+  },
+  "src/data/opensource.ts": {
+    "mtime": 1795664381.3305345,
+    "seen": 1795664452.195094,
+    "ast_hash": "b00da647ef97c45fc5f8e164ac3160b6",
+    "semantic_hash": ""
+  },
+  "src/data/profile.ts": {
+    "mtime": 1795664376.9284568,
+    "seen": 1795664452.195094,
+    "ast_hash": "39a4f442631c55b705982c93e5711ab7",
+    "semantic_hash": ""
+  },
+  "src/data/projects.ts": {
+    "mtime": 1795664378.2629762,
+    "seen": 1795664452.195094,
+    "ast_hash": "3f6c11f14729237da8099e4f1e0fafe4",
+    "semantic_hash": ""
+  },
+  "src/data/types.ts": {
+    "mtime": 1795664374.4981685,
+    "seen": 1795664452.195094,
+    "ast_hash": "2918ca1279fb3dc1be5c46c8d9aeb92f",
+    "semantic_hash": ""
+  },
   "pnpm-lock.yaml": {
     "mtime": 1795662538.713452,
     "seen": 1795662744.0778012,
