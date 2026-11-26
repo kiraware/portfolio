@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "src/App.tsx": {
-    "mtime": 1795658552.2557175,
-    "seen": 1795658720.5969458,
-    "ast_hash": "e4931f6d58500c8315d8198f9aa64ff0",
+    "mtime": 1795664915.6068883,
+    "seen": 1795664979.5165787,
+    "ast_hash": "530456c78aeeaec46fb38c514ac12b67",
     "semantic_hash": ""
   },
   "src/main.tsx": {
@@ -63,30 +63,6 @@
     "mtime": 1795662656.8940513,
     "seen": 1795662744.0778012,
     "ast_hash": "8235653af60c3cddf872639beb07717c",
-    "semantic_hash": ""
-  },
-  "public/icons.svg": {
-    "mtime": 1795658552.216706,
-    "seen": 1795658720.5969458,
-    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
-    "semantic_hash": ""
-  },
-  "src/assets/hero.png": {
-    "mtime": 1795658552.2027078,
-    "seen": 1795658720.5969458,
-    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
-    "semantic_hash": ""
-  },
-  "src/assets/react.svg": {
-    "mtime": 1795658552.2277083,
-    "seen": 1795658720.5969458,
-    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
-    "semantic_hash": ""
-  },
-  "src/assets/vite.svg": {
-    "mtime": 1795658552.2387078,
-    "seen": 1795658720.5969458,
-    "ast_hash": "9960a24288958394ac50e57ff638b036",
     "semantic_hash": ""
   },
   "scripts/install-hooks.ps1": {
@@ -357,6 +333,42 @@
     "mtime": 1795664732.755898,
     "seen": 1795664818.0962293,
     "ast_hash": "481aa8153d7bcebd7d0d5efb3dde3e73",
+    "semantic_hash": ""
+  },
+  "src/App.test.tsx": {
+    "mtime": 1795664938.903505,
+    "seen": 1795664979.5165787,
+    "ast_hash": "96f531fcb510c03cd8d10bf5fec1591e",
+    "semantic_hash": ""
+  },
+  "src/components/ContactSection.tsx": {
+    "mtime": 1795664913.3522322,
+    "seen": 1795664979.5165787,
+    "ast_hash": "6ad7c38211a969a767ce4df7c67f28ad",
+    "semantic_hash": ""
+  },
+  "src/components/ExperienceSection.tsx": {
+    "mtime": 1795664909.1792378,
+    "seen": 1795664979.5165787,
+    "ast_hash": "d8ece52efc4a9656508575008f852e57",
+    "semantic_hash": ""
+  },
+  "src/components/Footer.tsx": {
+    "mtime": 1795664914.313927,
+    "seen": 1795664979.5165787,
+    "ast_hash": "a1051516e4faa2688d72e098adab3fb0",
+    "semantic_hash": ""
+  },
+  "src/components/OpenSourceSection.tsx": {
+    "mtime": 1795664910.6124358,
+    "seen": 1795664979.5177674,
+    "ast_hash": "08974aa728b6c10fb91747fdc9fc8340",
+    "semantic_hash": ""
+  },
+  "src/components/SkillsEducationSection.tsx": {
+    "mtime": 1795664912.0864725,
+    "seen": 1795664979.5177674,
+    "ast_hash": "6b51ac3b32bb53ef966d724e99fbc4d4",
     "semantic_hash": ""
   },
   "pnpm-lock.yaml": {

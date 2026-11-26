@@ -1,17 +1,17 @@
 # Graph Report - portfolio  (2026-11-26)
 
 ## Corpus Check
-- 40 files · ~24,910 words
+- 46 files · ~26,121 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 6 file(s) not represented in the graph (top: (none) 4, .css 2)
+- Unclassified: 5 file(s) not represented in the graph (top: (none) 4, .css 1)
 
 ## Summary
-- 267 nodes · 501 edges · 16 communities (13 shown, 3 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.93)
+- 276 nodes · 614 edges · 16 communities (13 shown, 3 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d19f83a1`
+- Built from commit: `bdac9001`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,39 +22,39 @@
 - types.ts
 - manifest.json
 - .oxlintrc.json
-- scripts
+- MockIntersectionObserver
 - React + TypeScript + Vite
 - tsconfig.json
 - Violet Evergarden Portfolio Design — Cakrawangsa Praba Alkautsar
 - Hero.tsx
 - useLanguage.ts
-- useTheme
+- Header.tsx
 - ProjectModal.tsx
 - App.tsx
 
 ## God Nodes (most connected - your core abstractions)
-1. `useLanguage()` - 22 edges
+1. `useLanguage()` - 32 edges
 2. `LocalizedString` - 18 edges
 3. `compilerOptions` - 18 edges
-4. `compilerOptions` - 15 edges
-5. `react` - 13 edges
-6. `resolveAssetUrl()` - 11 edges
-7. `LanguageProvider()` - 10 edges
-8. `useTheme()` - 10 edges
-9. `vitest` - 10 edges
-10. `Hero()` - 9 edges
+4. `resolveAssetUrl()` - 15 edges
+5. `react` - 15 edges
+6. `compilerOptions` - 15 edges
+7. `App()` - 14 edges
+8. `lucide-react` - 14 edges
+9. `UI_STRINGS` - 13 edges
+10. `LanguageProvider()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Task 3: Authoritative Bilingual CV, Project, Experience & Open-Source Data Modules` --references--> `LocalizedString`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
+- `Task 6: Experience Timeline, Open Source Spotlight, Skills & Education, Contact Dispatch & App Assembly` --references--> `App()`  [INFERRED]
+  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/App.tsx
+- `Task 4: Header, Mobile Navigation Drawer, Ambient Petals & Hero ("Auto Memories Dispatch")` --references--> `useTheme()`  [INFERRED]
+  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/hooks/useTheme.ts
 - `Review Focus` --references--> `useLanguage()`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
-- `Task 6: Experience Timeline, Open Source Spotlight, Skills & Education, Contact Dispatch & App Assembly` --references--> `useLanguage()`  [INFERRED]
+- `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`` --references--> `useLanguage()`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
-- `File Structure` --references--> `LanguageProvider()`  [INFERRED]
-  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/LanguageContext.tsx
-- `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`` --references--> `LanguageProvider()`  [INFERRED]
-  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/LanguageContext.tsx
 
 ## Import Cycles
 - None detected.
@@ -62,8 +62,8 @@
 ## Communities (16 total, 3 thin omitted)
 
 ### Community 0 - "package.json"
-Cohesion: 0.07
-Nodes (37): dependencies, framer-motion@^14.14.0, lucide-react@^1.80.0, react@^19.3.1, react-dom@^19.3.1, tailwindcss@^4.3.5, @tailwindcss/vite@^4.3.5, devDependencies (+29 more)
+Cohesion: 0.06
+Nodes (48): dependencies, framer-motion@^14.14.0, lucide-react@^1.80.0, react@^19.3.1, react-dom@^19.3.1, tailwindcss@^4.3.5, @tailwindcss/vite@^4.3.5, devDependencies (+40 more)
 
 ### Community 1 - "compilerOptions"
 Cohesion: 0.10
@@ -74,8 +74,8 @@ Cohesion: 0.12
 Nodes (16): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib, module, moduleDetection, noEmit, noFallthroughCasesInSwitch (+8 more)
 
 ### Community 3 - "types.ts"
-Cohesion: 0.11
-Nodes (27): LocalizedString, assertLocalizedStringsNonEmpty(), PUBLIC_DIR, EXPERIENCES, CREATOR_CHANNEL, OPEN_SOURCE_HIGHLIGHTS, OPEN_SOURCE_PACKAGES, SIAKADU_DEMO_MESSAGES (+19 more)
+Cohesion: 0.16
+Nodes (19): EXP_FILTERS, LocalizedString, EXPERIENCES, SIAKADU_DEMO_MESSAGES, CertificationItem, CreatorChannel, EducationItem, ExperienceCategory (+11 more)
 
 ### Community 4 - "manifest.json"
 Cohesion: 0.33
@@ -84,10 +84,6 @@ Nodes (5): artwork, editorialFallbacks, generatedAt, screenshots, viewport
 ### Community 5 - ".oxlintrc.json"
 Cohesion: 0.29
 Nodes (6): ignorePatterns, plugins, rules, react/only-export-components, react/rules-of-hooks, $schema
-
-### Community 6 - "scripts"
-Cohesion: 0.29
-Nodes (7): scripts, build, dev, lint, prepare-hooks, preview, test
 
 ### Community 7 - "React + TypeScript + Vite"
 Cohesion: 0.50
@@ -99,19 +95,23 @@ Nodes (25): 1. Intent & Why, 2. Goals, Non-Goals, and Anti-Goals, 3. Approaches 
 
 ### Community 11 - "Hero.tsx"
 Cohesion: 0.15
-Nodes (21): framer-motion, react, AmbientPetals(), PETALS, PetalSpec, GithubIcon(), LinkedinIcon(), YoutubeIcon() (+13 more)
+Nodes (23): lucide-react, AmbientPetals(), PETALS, PetalSpec, GithubIcon(), LinkedinIcon(), YoutubeIcon(), ContactSection() (+15 more)
 
 ### Community 12 - "useLanguage.ts"
-Cohesion: 0.16
-Nodes (12): @testing-library/react, vitest, renderProjects(), getInitialLocale(), LanguageProvider(), parseLocale(), Probe(), LANG_STORAGE_KEY (+4 more)
+Cohesion: 0.33
+Nodes (8): react, getInitialLocale(), parseLocale(), Probe(), LANG_STORAGE_KEY, LanguageContext, LanguageContextValue, Locale
 
-### Community 13 - "useTheme"
-Cohesion: 0.20
-Nodes (9): Global Constraints, Review Focus, Violet Evergarden Portfolio Implementation Plan, ColorScheme, getSystemScheme(), readStoredScheme(), syncMetaColorScheme(), THEME_STORAGE_KEY (+1 more)
+### Community 13 - "Header.tsx"
+Cohesion: 0.11
+Nodes (21): File Structure, Global Constraints, Review Focus, Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`, Task 2: Generate Violet Evergarden Artwork & Acquire Real Project Screenshots, Task 3: Authoritative Bilingual CV, Project, Experience & Open-Source Data Modules, Task 6: Experience Timeline, Open Source Spotlight, Skills & Education, Contact Dispatch & App Assembly, Task 7: End-to-End Visual QA, Responsive & Accessibility Verification, and Graphify Sync (+13 more)
 
 ### Community 14 - "ProjectModal.tsx"
-Cohesion: 0.16
-Nodes (22): File Structure, Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`, Task 2: Generate Violet Evergarden Artwork & Acquire Real Project Screenshots, Task 3: Authoritative Bilingual CV, Project, Experience & Open-Source Data Modules, Task 4: Header, Mobile Navigation Drawer, Ambient Petals & Hero ("Auto Memories Dispatch"), Task 5: Screenshot-First Projects Showcase & Native `<dialog>` Case Study Lightbox, Task 7: End-to-End Visual QA, Responsive & Accessibility Verification, and Graphify Sync, lucide-react (+14 more)
+Cohesion: 0.22
+Nodes (16): Task 4: Header, Mobile Navigation Drawer, Ambient Petals & Hero ("Auto Memories Dispatch"), Task 5: Screenshot-First Projects Showcase & Native `<dialog>` Case Study Lightbox, TelegramIcon(), LinkIcon(), ModalContentProps, ProjectModal(), ProjectModalContent(), ProjectModalProps (+8 more)
+
+### Community 15 - "App.tsx"
+Cohesion: 0.26
+Nodes (8): App(), ExperienceSection(), Footer(), OpenSourceSection(), OrnamentalDivider(), OrnamentalDividerProps, WaxSealMonogramProps, SkillsEducationSection()
 
 ## Knowledge Gaps
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
@@ -119,17 +119,17 @@ Nodes (22): File Structure, Task 1: Test Harness, Violet Evergarden Theme System
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `Hero.tsx` to `package.json`, `useLanguage.ts`, `useTheme`, `ProjectModal.tsx`, `App.tsx`?**
-  _High betweenness centrality (0.091) - this node is a cross-community bridge._
+- **Why does `react` connect `useLanguage.ts` to `package.json`, `types.ts`, `Hero.tsx`, `Header.tsx`, `ProjectModal.tsx`, `App.tsx`?**
+  _High betweenness centrality (0.068) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `useLanguage()` (e.g. with `Review Focus` and `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext``) actually correct?**
   _`useLanguage()` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06923076923076923 - nodes in this community are weakly interconnected._
-- **Why does `vitest` connect `useLanguage.ts` to `package.json`, `types.ts`, `Hero.tsx`, `useTheme`, `ProjectModal.tsx`?**
-  _High betweenness centrality (0.065) - this node is a cross-community bridge._
+  _Cohesion score 0.055152394775036286 - nodes in this community are weakly interconnected._
+- **Why does `vitest` connect `package.json` to `Hero.tsx`, `useLanguage.ts`, `Header.tsx`, `ProjectModal.tsx`, `App.tsx`?**
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+- **Are the 3 inferred relationships involving `resolveAssetUrl()` (e.g. with `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`` and `Task 4: Header, Mobile Navigation Drawer, Ambient Petals & Hero ("Auto Memories Dispatch")`) actually correct?**
+  _`resolveAssetUrl()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
-- **Why does `useLanguage()` connect `ProjectModal.tsx` to `Hero.tsx`, `useLanguage.ts`, `useTheme`, `App.tsx`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
-- **Should `compilerOptions` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+- **Why does `useLanguage()` connect `ProjectModal.tsx` to `types.ts`, `Hero.tsx`, `useLanguage.ts`, `Header.tsx`, `App.tsx`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
