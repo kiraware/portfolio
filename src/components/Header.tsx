@@ -29,7 +29,10 @@ export function Header() {
           <a href="#top" className="group inline-flex items-center gap-3 min-w-0">
             <WaxSealMonogram monogram={PROFILE.monogram} size="sm" />
             <div className="min-w-0">
-              <span className="block truncate font-display text-xl font-semibold tracking-tight text-ink transition-colors group-hover:text-prussian">
+              <span className="block truncate font-display text-xl font-semibold tracking-tight text-ink transition-colors group-hover:text-prussian sm:hidden">
+                {PROFILE.shortName}
+              </span>
+              <span className="hidden truncate font-display text-xl font-semibold tracking-tight text-ink transition-colors group-hover:text-prussian sm:block">
                 Cakrawangsa Praba
               </span>
               <span className="hidden sm:block font-mono text-[10px] tracking-[0.2em] uppercase text-ink-muted">

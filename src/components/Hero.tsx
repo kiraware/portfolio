@@ -47,7 +47,10 @@ export function Hero() {
             animate="visible"
             className="lg:col-span-7"
           >
-            <motion.div variants={HERO_ITEM} className="mb-5 flex flex-wrap items-center gap-3">
+            <motion.div
+              variants={HERO_ITEM}
+              className="mb-5 flex flex-wrap items-center gap-3 pr-14 sm:pr-0"
+            >
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-brooch/35 bg-surface/90 px-3.5 py-1.5 text-xs font-medium text-ink shadow-xs">
                 <span
                   className="ve-brooch-dot h-2 w-2 rounded-full bg-emerald-brooch"

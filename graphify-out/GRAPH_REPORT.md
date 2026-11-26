@@ -1,7 +1,7 @@
 # Graph Report - portfolio  (2026-11-26)
 
 ## Corpus Check
-- 46 files · ~26,121 words
+- 46 files · ~26,135 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: (none) 4, .css 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bdac9001`
+- Built from commit: `16d70717`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -47,13 +47,13 @@
 ## Surprising Connections (you probably didn't know these)
 - `Task 3: Authoritative Bilingual CV, Project, Experience & Open-Source Data Modules` --references--> `LocalizedString`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
-- `Task 6: Experience Timeline, Open Source Spotlight, Skills & Education, Contact Dispatch & App Assembly` --references--> `App()`  [INFERRED]
-  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/App.tsx
 - `Task 4: Header, Mobile Navigation Drawer, Ambient Petals & Hero ("Auto Memories Dispatch")` --references--> `useTheme()`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/hooks/useTheme.ts
 - `Review Focus` --references--> `useLanguage()`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
 - `Task 1: Test Harness, Violet Evergarden Theme System, `assetUrl`, `useTheme`, and `LanguageContext`` --references--> `useLanguage()`  [INFERRED]
+  docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
+- `Task 6: Experience Timeline, Open Source Spotlight, Skills & Education, Contact Dispatch & App Assembly` --references--> `useLanguage()`  [INFERRED]
   docs/superpowers/plans/2026-11-26-violet-evergarden-portfolio.md → src/context/useLanguage.ts
 
 ## Import Cycles
